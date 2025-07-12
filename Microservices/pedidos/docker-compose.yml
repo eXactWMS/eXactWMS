@@ -1,0 +1,69 @@
+version: '3.8'
+
+x-default-env: &default-env
+  RHEMA_DB_HOST: "exactwms.ddns.net"
+  RHEMA_DB_DATABASE: "eXactWMS_DC"
+  RHEMA_DB_USER: "eXactWMS"
+  RHEMA_DB_PASSWORD: "3X4ctWM5"
+  RHEMA_DB_LOG_HOST: "exactwms.ddns.net"
+  RHEMA_DB_LOG_DATABASE: "eXactWMS_Log"
+  RHEMA_DB_LOG_USER: "eXactWMS"
+  RHEMA_DB_LOG_PASSWORD: "3X4ctWM5"
+  HOST_RABBIT: "rabbitmq"
+  USER_RABBIT: "guest"
+  PASSWORD_RABBIT: "guest"
+  SERVIDOR_API: "http://exactwms.ddns.net:32100"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"     # porta para os serviços acessarem (AMQP)
+      - "15672:15672"   # interface web de gerenciamento
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - exactwmsservice-net
+  pedidosworker1:
+    restart: always
+    image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
+    container_name: docker_exactwms_conveniencia
+    environment:
+      <<: *default-env
+      RHEMA_SERVER_PORT: "8301"
+      RABBIT_FILA: "Zona Picking Conveniencia"
+    ports:
+      - "8301:8301"
+    networks:
+      - exactwmsservice-net
+
+  pedidosworker2:
+    image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
+    restart: always
+    container_name: docker_exactwms_perfumaria
+    environment:
+      <<: *default-env
+      RHEMA_SERVER_PORT: "8302"
+      RABBIT_FILA: "Zona Picking Perfumaria"
+    ports:
+      - "8302:8302"
+    networks:
+      - exactwmsservice-net
+
+  pedidosworker3:
+    image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
+    restart: always
+    container_name: docker_exactwms_dermo
+    environment:
+      <<: *default-env
+      RHEMA_SERVER_PORT: "8303"
+      RABBIT_FILA: "Zona Picking Dermo"
+    ports:
+      - "8303:8303"
+    networks:
+      - exactwmsservice-net
+
+networks:
+  exactwmsservice-net:

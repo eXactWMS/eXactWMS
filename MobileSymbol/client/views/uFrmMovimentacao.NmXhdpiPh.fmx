@@ -1,0 +1,145 @@
+inherited FrmMovimentacao_NmXhdpiPh: TFrmMovimentacao_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 0
+  inherited LytBase: TLayout
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited ScaledLayout1: TScaledLayout
+      OriginalWidth = 400.000000000000000000
+      OriginalHeight = 615.000000000000000000
+      Size.Width = 400.000000000000000000
+      Size.Height = 615.000000000000000000
+      inherited LytMnTop: TLayout
+        inherited RctMnTop: TRectangle
+          inherited ImgPgcLeft: TSpeedButton
+            Size.Width = 48.000000000000000000
+          end
+          inherited ImgPgcRight: TSpeedButton
+            Position.X = 342.000000000000000000
+            Size.Width = 48.000000000000000000
+          end
+          inherited TbOpCadastro: TToolBar
+            Size.Width = 294.000000000000000000
+            inherited BtnCancel: TSpeedButton
+              Position.Y = 9.000000000000000000
+              Size.Width = 32.000000000000000000
+              Size.Height = 30.000000000000000000
+            end
+            inherited BtnDel: TSpeedButton
+              Position.X = 191.000000000000000000
+            end
+          end
+        end
+      end
+      inherited VertScrollBox1: TVertScrollBox
+        Size.Width = 400.000000000000000000
+        Size.Height = 615.000000000000000000
+        Viewport.Width = 400.000000000000000000
+        Viewport.Height = 615.000000000000000000
+        inherited PgcPrincipal: TTabControl
+          Size.Width = 400.000000000000000000
+          Size.Height = 615.000000000000000000
+          inherited TabLista: TTabItem
+            Size.Width = 200.000000000000000000
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited LstPrincipal: TListView
+              Size.Width = 40.000000000000000000
+              Size.Height = 40.000000000000000000
+            end
+            inherited GdSearch: TGrid
+              Viewport.Width = 386.000000000000000000
+              Viewport.Height = 297.000000000000000000
+            end
+          end
+          inherited TabDetalhes: TTabItem
+            Size.Width = 200.000000000000000000
+            ExplicitSize.cx = 320.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
+            inherited EdtCodigo: TEdit
+              TabOrder = 4
+            end
+            inherited PgcMovimentacao: TTabControl
+              Position.Y = 56.000000000000000000
+              Size.Width = 400.000000000000000000
+              Size.Height = 510.000000000000000000
+              TabHeight = 49.000000000000000000
+              TabOrder = 2
+              inherited TbArmazenagem: TTabItem
+                ExplicitSize.cx = 8.000000000000000000
+                ExplicitSize.cy = 8.000000000000000000
+                inherited Label1: TLabel
+                  Size.Width = 70.000000000000000000
+                  Size.Height = 24.000000000000000000
+                end
+                inherited Label3: TLabel
+                  Size.Width = 125.000000000000000000
+                  Size.Height = 24.000000000000000000
+                end
+                inherited Label5: TLabel
+                  Size.Width = 164.000000000000000000
+                  Size.Height = 24.000000000000000000
+                end
+                inherited Label6: TLabel
+                  Size.Width = 147.000000000000000000
+                  Size.Height = 24.000000000000000000
+                end
+                inherited EdtCodProdArm: TEdit
+                  TabOrder = 65
+                end
+              end
+              inherited TbPickPick: TTabItem
+                ExplicitSize.cx = 8.000000000000000000
+                ExplicitSize.cy = 8.000000000000000000
+              end
+              inherited TbPickPallet: TTabItem
+                ExplicitSize.cx = 8.000000000000000000
+                ExplicitSize.cy = 8.000000000000000000
+              end
+              inherited TbPalletPick: TTabItem
+                ExplicitSize.cx = 8.000000000000000000
+                ExplicitSize.cy = 8.000000000000000000
+              end
+              inherited TbPalletPallet: TTabItem
+                ExplicitSize.cx = 8.000000000000000000
+                ExplicitSize.cy = 8.000000000000000000
+              end
+              inherited TbPalletAll: TTabItem
+                ExplicitSize.cx = 8.000000000000000000
+                ExplicitSize.cy = 8.000000000000000000
+              end
+            end
+            inherited Label2: TLabel
+              Size.Width = 164.000000000000000000
+              Size.Height = 24.000000000000000000
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited GestureManager1: TGestureManager
+    GestureData = <
+      item
+        Control = LstPrincipal
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end
+          item
+            GestureID = sgiUp
+          end
+          item
+            GestureID = sgiDown
+          end>
+      end
+      item
+        Control = GdSearch
+        Collection = <>
+      end>
+  end
+end

@@ -1,0 +1,2 @@
+inherited ServiceCaixas: TServiceCaixas
+end

@@ -1,0 +1,35 @@
+String branchName = "main"
+String gitCredentials = "GITHUB_WK"
+String repoUrl = "git@github.com:WKTechnologyBR/Fabrica-Concordia-Controle_de_Ponto.git"
+node {
+
+  stage('Clone') {
+      
+      echo 'clonando repositorio'
+      sh 'mkdir -p buildApi'
+
+      echo 'Clonando  (branch: "' + branchName + '" )'
+      dir('buildApi') {
+          git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
+      }     
+  }       
+}
+node {
+  def remote = [:]
+  remote.name = 'srv-appi'
+  remote.host = '192.168.100.25' 
+  remote.user = 'suporte'
+  remote.port = 22
+  remote.password = 'cdia@2022'
+  remote.allowAnyHosts = true
+  stage('Remote SSH') {
+    sshPut remote: remote, from: 'buildApi', into: '.'
+    sshCommand remote: remote,sudo:false,failOnError:false, command: "docker container stop dockerConcordiaApi"
+    sshCommand remote: remote,sudo:false,failOnError:false,  command: "docker container rm dockerConcordiaApi" 
+    sshCommand remote: remote,sudo:false,failOnError:false,  command: "docker image rm  concordia-api  -f" 
+    sshCommand remote: remote,sudo:false,failOnError:false,  command: "cd /home/suporte/buildFront"
+    sshCommand remote: remote,sudo:false,failOnError:true,  command: "docker compose -f /home/suporte/buildApi/docker-compose.yml down" 
+    sshCommand remote: remote,sudo:false,failOnError:true,  command: "docker compose -f /home/suporte/buildApi/docker-compose.yml up -d" 
+    
+  }
+}

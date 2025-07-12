@@ -1,0 +1,1598 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup>
+        <DeviceId Condition="'$(Platform)'=='Android'"/>
+        <DeviceId Condition="'$(Platform)'=='Android64'"/>
+    </PropertyGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win32'"/>
+    <ItemGroup Condition="'$(Platform)'=='Android64'">
+        <DeployFile Include="bin\sound\toast.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>toast.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\provider_paths.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\xml\</RemoteDir>
+            <RemoteName>provider_paths.xml</RemoteName>
+            <DeployClass>AndroidFileProvider</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\icone\res\mipmap-hdpi72x72\GrupoX3.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>GrupoX3.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 640x480.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\sino1.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>sino1.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\ok.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>ok.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\toast2.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>toast2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\toast4.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast4.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\library\lib\mips\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi-v7a\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiv7aFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-hdpi72x72\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\icone\res\mipmap-xhdpi96x96\GrupoX3.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>GrupoX3.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\readme" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>readme</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="wmsconfig.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>wmsconfig.xml</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="wmsconfig.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>wmsconfig.xml</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\toast4.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>toast4.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\success.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>success.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\styles.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\styles.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\Invalido.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>Invalido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\toast.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\colors.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_Colors</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\colors.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_Colors</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\ok.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>ok.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\concluido.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>concluido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-mdpi36x36\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon192</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon192</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\Invalido.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>Invalido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\toast3.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast3.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\strings.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>strings.xml</RemoteName>
+            <DeployClass>Android_Strings</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\strings.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>strings.xml</RemoteName>
+            <DeployClass>Android_Strings</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\sinoescola.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>sinoescola.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\errograve.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>errograve.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\checkouterrado.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>checkouterrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-mdpi48x48\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\Splash 426x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>Splash 426x320.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\toast3.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>toast3.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\sirene1.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>sirene1.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\toast2.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 426x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\sinoigreja.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>sinoigreja.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\sirene5.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>sirene5.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\alerta.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>alerta.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\icone\res\mipmap-xxhdpi144x144\GrupoX3.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>GrupoX3.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\atencao.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>atencao.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-xhdpi96x96\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\Splash 470x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>Splash 470x320.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\produtoerrado2.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>produtoerrado2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\checkouterrado2.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>checkouterrado2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-xxhdpi144x144\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\icone\res\mipmap-mdpi36x36\GrupoX3.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>GrupoX3.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\produtoerrado.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>produtoerrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\checkouterrado.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>checkouterrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\sirene3.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>sirene3.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\icone\res\mipmap-xxxhdpi192x192\GrupoX3.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>GrupoX3.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\eXactWmsMobile.classes" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\classes\</RemoteDir>
+            <RemoteName>eXactWmsMobile.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\eXactWmsMobile.classes" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\classes\</RemoteDir>
+            <RemoteName>eXactWmsMobile.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\splash_image_def.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable\</RemoteDir>
+            <RemoteName>splash_image_def.xml</RemoteName>
+            <DeployClass>AndroidSplashImageDef</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\splash_image_def.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable\</RemoteDir>
+            <RemoteName>splash_image_def.xml</RemoteName>
+            <DeployClass>AndroidSplashImageDef</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\apito.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>apito.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\colors-night-v21.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\values-night-v21\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_ColorsDark</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\colors-night-v21.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values-night-v21\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_ColorsDark</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\alerta.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>alerta.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\icone\res\mipmap-mdpi48x48\GrupoX3.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>GrupoX3.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\Splash 960x720.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>Splash 960x720.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\styles-v21.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\styles-v21.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\Buzina.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>Buzina.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\notfound.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>notfound.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 960x720.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\alarmeincendio.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>alarmeincendio.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>AndroidManifest.xml</RemoteName>
+            <DeployClass>ProjectAndroidManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\AndroidManifest.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>AndroidManifest.xml</RemoteName>
+            <DeployClass>ProjectAndroidManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\checkouterrado2.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>checkouterrado2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\concluido.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>concluido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\libeXactWmsMobile.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile\libeXactWmsMobile.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 470x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\atencao.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>atencao.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon24</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon24</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\notfound.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>notfound.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\dados\exactwms.db3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>exactwms.db3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\dados\exactwms.db3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>exactwms.db3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\produtoerrado.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>produtoerrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\success.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>success.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="images\Splash 640x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>Splash 640x480.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Sound\alarme.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>alarme.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="bin\sound\errograve.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>errograve.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android'">
+        <DeployFile Include="Bin\Sound\Invalido.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>Invalido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\Invalido.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>Invalido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\atencao.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>atencao.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\atencao.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>atencao.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-mdpi36x36\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\ok.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>ok.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\ok.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>ok.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast4.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast4.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast4.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast4.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-mdpi48x48\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\dados\exactwms.db3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>exactwms.db3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-xxhdpi144x144\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 470x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\produtoerrado.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>produtoerrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\produtoerrado.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>produtoerrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-xhdpi96x96\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\libeXactWmsMobile.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon192</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\success.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>success.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\success.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>success.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\styles.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 426x320.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\splash_image_def.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable\</RemoteDir>
+            <RemoteName>splash_image_def.xml</RemoteName>
+            <DeployClass>AndroidSplashImageDef</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 640x480.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast2.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast2.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Splash 960x720.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\colors.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_Colors</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon24</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\eXactWmsMobile.classes" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\classes\</RemoteDir>
+            <RemoteName>eXactWmsMobile.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\styles-v21.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="wmsconfig.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>wmsconfig.xml</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\concluido.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>concluido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\concluido.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>concluido.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\checkouterrado.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>checkouterrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\checkouterrado.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>checkouterrado.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast3.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast3.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\toast3.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>toast3.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\colors-night-v21.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values-night-v21\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_ColorsDark</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Images\Icone\res\mipmap-hdpi72x72\GrupoX3.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\release\armeabi\libnative-activity.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Dados\wmscoletor.db3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>wmscoletor.db3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Dados\wmscoletor.db3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>wmscoletor.db3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\errograve.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>errograve.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\errograve.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>errograve.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\alerta.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>alerta.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\alerta.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>alerta.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\checkouterrado2.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>checkouterrado2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\checkouterrado2.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>checkouterrado2.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\notfound.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>notfound.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Sound\notfound.wav" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\assets\internal\</RemoteDir>
+            <RemoteName>notfound.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\strings.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\res\values\</RemoteDir>
+            <RemoteName>strings.xml</RemoteName>
+            <DeployClass>Android_Strings</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\release\mips\libnative-activity.so" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\library\lib\mips\</RemoteDir>
+            <RemoteName>libeXactWmsMobile.so</RemoteName>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\Mobile32\AndroidManifest.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>AndroidManifest.xml</RemoteName>
+            <DeployClass>ProjectAndroidManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win64'">
+        <DeployFile Include="Bin\success.wav" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>success.wav</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Bin\Dados\wmscoletor.db3" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>wmscoletor.db3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="C:\App\eXactWMS\dados\exactwms.db3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>exactwms.db3</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="c:\App\eXactWMS\eXactWmsMobile.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>eXactWmsMobile.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="c:\App\eXactWMS\eXactWmsMobile.exe" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>eXactWmsMobile.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="wmsconfig.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>wmsconfig.xml</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="wmsconfig.xml" Condition="'$(Config)'=='Release'">
+            <RemoteDir>eXactWmsMobile\</RemoteDir>
+            <RemoteName>wmsconfig.xml</RemoteName>
+            <DeployClass>ProjectFile</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Linux64'"/>
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <Instalacao>1</Instalacao>
+    <Company>
+        <Name>DROGA FUJI</Name>
+    </Company>
+    <Server>
+        <Ip>10.1.1.50</Ip>
+        <Port>8300</Port>
+    </Server>
+    <Collector>
+        <Brand>Honeywell</Brand>
+        <Scanner>1</Scanner>
+        <Teclado>0</Teclado>
+    </Collector>
+    <License>
+
+    </License>
+</config>

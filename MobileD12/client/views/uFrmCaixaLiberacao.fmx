@@ -1,0 +1,344 @@
+inherited FrmCaixaLiberacao: TFrmCaixaLiberacao
+  Caption = 'FrmBase1'
+  DesignerMasterStyle = 0
+  inherited LytBase: TLayout
+    inherited ScaledLayout1: TScaledLayout
+      inherited VertScrollBox1: TVertScrollBox
+        Viewport.Width = 364.000000000000000000
+        Viewport.Height = 505.000000000000000000
+        inherited PgcPrincipal: TTabControl
+          Sizes = (
+            364s
+            505s
+            364s
+            505s
+            364s
+            505s)
+          inherited TabLista: TTabItem
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited GdSearch: TGrid
+              Viewport.Width = 390.000000000000000000
+              Viewport.Height = 322.000000000000000000
+            end
+          end
+          inherited TabDetalhes: TTabItem
+            ExplicitSize.cx = 320.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
+            inherited Codigo: TLabel
+              Size.Width = 130.000000000000000000
+              Text = 'Caixa - Identifica'#231#227'o'
+            end
+            inherited EdtCodigo: TEdit
+              TabOrder = 2
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Trailing
+              Size.Width = 130.000000000000000000
+              StyledSettings = [Family, FontColor]
+              OnValidate = EdtCodigoValidate
+              inherited LnCodigo: TLine
+                Size.Width = 130.000000000000000000
+              end
+            end
+            inherited CircleStatus: TCircle
+              Position.X = 220.000000000000000000
+              Position.Y = 34.000000000000000000
+            end
+            inherited LblAtivo: TLabel
+              Position.X = 242.000000000000000000
+              Position.Y = 36.000000000000000000
+            end
+            object RctCaixa: TRectangle
+              Fill.Color = claWhite
+              Position.X = 6.000000000000000000
+              Position.Y = 96.000000000000000000
+              Size.Width = 353.000000000000000000
+              Size.Height = 265.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claChocolate
+              object ChkDisponivel: TCheckBox
+                Position.X = 6.000000000000000000
+                Position.Y = 159.000000000000000000
+                TabOrder = 0
+                Text = 'Dispon'#237'vel'
+              end
+              object EdtCaixaModelo: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 7
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 8.000000000000000000
+                Position.Y = 30.000000000000000000
+                Size.Width = 337.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                object Line1: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 337.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object EdtPedidoVolumeId: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 5
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                TextSettings.VertAlign = Trailing
+                Position.X = 8.000000000000000000
+                Position.Y = 218.000000000000000000
+                Size.Width = 103.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                object Line2: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 103.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object LblCaixaModelo: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 8.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 95.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Caixa - Modelo'
+                TabOrder = 3
+              end
+              object LblPedidoVolumeId: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 6.000000000000000000
+                Position.Y = 201.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Volume'
+                TabOrder = 1
+              end
+              object EdtIdentificacao: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 6
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 8.000000000000000000
+                Position.Y = 103.000000000000000000
+                Size.Width = 82.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                object Line3: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 82.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object Label1: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 8.000000000000000000
+                Position.Y = 83.000000000000000000
+                Size.Width = 82.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Identifica'#231#227'o'
+                TabOrder = 2
+              end
+            end
+          end
+          inherited TabConfirmacao: TTabItem
+            ExplicitSize.cx = 8.000000000000000000
+            ExplicitSize.cy = 8.000000000000000000
+            inherited RctConfirmacao: TRectangle
+              inherited LytTopConfirmacao: TLayout
+                inherited RctTopConfirmacao: TRectangle
+                  inherited LytTituloConfirmacao: TLayout
+                    inherited LblTituloConfirmacao: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+              inherited LytCenterConfirmacao: TLayout
+                inherited LytMsgConfirmacao: TLayout
+                  inherited LytMensagens: TLayout
+                    inherited LytMensagem1: TLayout
+                      inherited LblMensagem1: TLabel
+                        TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      end
+                    end
+                  end
+                end
+                inherited LytButtonConfirmacao: TLayout
+                  inherited LytBtnConfirma: TLayout
+                    inherited RctBtnConfirma: TRectangle
+                      inherited lbl_BtnConfirma: TLabel
+                        TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      end
+                      inherited LytConfirma: TLayout
+                        inherited img_Confirma: TImage
+                          MultiResBitmap.Height = 10
+                          MultiResBitmap.Width = 60
+                        end
+                      end
+                    end
+                  end
+                  inherited LytBtnCancel: TLayout
+                    inherited RctbtnCancel: TRectangle
+                      inherited img_iconeCancel: TImage
+                        MultiResBitmap.Height = 64
+                        MultiResBitmap.Width = 64
+                      end
+                      inherited lbl_BtnCancel: TLabel
+                        TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      end
+                      inherited img_Cancel: TImage
+                        MultiResBitmap.Height = 64
+                        MultiResBitmap.Width = 64
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+        inherited LytAutorizacao: TLayout
+          inherited RctAutorizacao: TRectangle
+            inherited lytAutorizaCenterLogin: TLayout
+              inherited RctAutorizaCenterLogin: TRectangle
+                inherited EdtUsuarioCtrlSeg: TEdit
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited EdtSenhaCtrlSeg: TEdit
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited BtnLogIn: TRectangle
+                  inherited LblLogin: TLabel
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  end
+                end
+              end
+            end
+          end
+        end
+        inherited LytShowErro: TLayout
+          inherited RctShowErro: TRectangle
+            inherited LytBodyShowErro: TLayout
+              inherited Rectangle5: TRectangle
+                inherited LblMsg01ShowErro: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited LblMsg02ShowErro: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited RctBtnOkShowErro: TRectangle
+                  inherited LblBtnOkShowErro: TLabel
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+      inherited LytTopForm: TLayout
+        inherited RctTopForm: TRectangle
+          inherited RctTitle: TRectangle
+            inherited LblTituloForm: TLabel
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+          end
+          inherited LytMnTop: TLayout
+            inherited RctBarraFerramentas: TRectangle
+              inherited BtnAdd: TSpeedButton
+                Visible = False
+              end
+              inherited BtnEdit: TSpeedButton
+                Position.X = 41.000000000000000000
+                Visible = False
+              end
+              inherited BtnDel: TSpeedButton
+                Position.X = 79.000000000000000000
+                Visible = False
+              end
+              inherited BtnCancel: TSpeedButton
+                Position.X = 155.000000000000000000
+                Visible = False
+              end
+              inherited BtnSave: TSpeedButton
+                Position.X = 41.000000000000000000
+                Visible = False
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited ImgLstRecycledChocolate: TImage
+    MultiResBitmap.Height = 24
+    MultiResBitmap.Width = 24
+  end
+  inherited ImgLstRecycledGray: TImage
+    MultiResBitmap.Height = 24
+    MultiResBitmap.Width = 24
+  end
+  inherited ImgLstFdoYellow: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+  end
+  inherited ImgLstFdoGreen: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+    MultiResBitmap.TransparentColor = 32768
+  end
+  inherited ImgLstFdoRed: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+  end
+  inherited ImgFdoGrid01: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+  end
+  inherited ImgFdoGrid02: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+    MultiResBitmap.TransparentColor = 32768
+  end
+  inherited ImgEye: TImage
+    MultiResBitmap.Height = 24
+    MultiResBitmap.Width = 24
+  end
+end

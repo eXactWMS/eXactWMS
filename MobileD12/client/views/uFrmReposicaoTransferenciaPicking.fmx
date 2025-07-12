@@ -1,0 +1,2334 @@
+inherited FrmReposicaoTransferenciaPicking: TFrmReposicaoTransferenciaPicking
+  Caption = 'FrmBase1'
+  DesignerMasterStyle = 3
+  inherited LytBase: TLayout
+    inherited ScaledLayout1: TScaledLayout
+      inherited VertScrollBox1: TVertScrollBox
+        Viewport.Width = 364.000000000000000000
+        Viewport.Height = 505.000000000000000000
+        inherited PgcPrincipal: TTabControl
+          TabIndex = 3
+          Sizes = (
+            364s
+            505s
+            364s
+            505s
+            364s
+            505s
+            364s
+            505s)
+          inherited TabLista: TTabItem
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited GdSearch: TGrid
+              Viewport.Width = 390.000000000000000000
+              Viewport.Height = 322.000000000000000000
+            end
+            inherited LytPesqForm: TLayout
+              inherited LblContPesq: TLabel
+                Position.X = 4.000000000000000000
+                Size.Width = 82.000000000000000000
+                Text = 'Reposi'#231#227'o Id'
+              end
+              inherited EdtConteudoPesq: TEdit
+                Position.X = 2.000000000000000000
+                Size.Width = 85.000000000000000000
+                inherited LnConteudoPesq: TLine
+                  Size.Width = 85.000000000000000000
+                end
+              end
+              inherited CbCampoPesq: TComboBox
+                ItemIndex = 1
+                Visible = False
+              end
+              inherited LblCbPesq: TLabel
+                Visible = False
+              end
+              inherited BtnSearchPesq: TSpeedButton
+                Position.X = 92.000000000000000000
+              end
+            end
+            inherited LytListaBase: TLayout
+              inherited LstPrincipal: TListView
+                ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+                  item
+                    AppearanceObjectName = 'Image2'
+                    AppearanceClassName = 'TImageObjectAppearance'
+                    Appearance.ScalingMode = Stretch
+                    Appearance.Width = 330.000000000000000000
+                    Appearance.Height = 30.000000000000000000
+                    Appearance.PlaceOffset.Y = 1.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'Image3'
+                    AppearanceClassName = 'TImageObjectAppearance'
+                    Appearance.Width = 25.000000000000000000
+                    Appearance.Height = 30.000000000000000000
+                    Appearance.PlaceOffset.X = 330.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'ReposicaoId'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Leading
+                    Appearance.Width = 35.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 4.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'DtReposicao'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.Width = 75.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 45.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'EnderecoIni'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Leading
+                    Appearance.Width = 75.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 125.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'Zona'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Leading
+                    Appearance.Width = 120.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 205.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end>
+                OnItemClick = LstPrincipalItemClick
+              end
+              inherited RctTitListaPrincipal: TRectangle
+                inherited LblTit01: TLabel
+                  Size.Width = 41.000000000000000000
+                  Text = 'Ordem'
+                end
+                object LblTit02: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.X = 44.000000000000000000
+                  Size.Width = 69.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Dt.Repos.'
+                  TabOrder = 1
+                end
+                object LblTit03: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.X = 120.000000000000000000
+                  Size.Width = 71.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'End.Inicial'
+                  TabOrder = 2
+                end
+                object LblTit04: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.X = 208.000000000000000000
+                  Size.Width = 41.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Trimming = None
+                  Text = 'Zona'
+                  TabOrder = 3
+                end
+              end
+            end
+          end
+          inherited TabDetalhes: TTabItem
+            IsSelected = False
+            ExplicitSize.cx = 320.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
+            inherited Codigo: TLabel
+              Position.X = 4.000000000000000000
+              Position.Y = 8.000000000000000000
+              Size.Width = 82.000000000000000000
+              Text = 'Reposi'#231#227'o Id'
+            end
+            inherited EdtCodigo: TEdit
+              TabOrder = 2
+              TabStop = False
+              Position.Y = 28.000000000000000000
+              Visible = False
+              OnChange = EdtCodigoChange
+              OnExit = EdtCodigoExit
+            end
+            object LytTop: TLayout
+              Align = Top
+              Size.Width = 364.000000000000000000
+              Size.Height = 67.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              TabStop = False
+              object EdtDtReposicao: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 1
+                TabStop = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 108.000000000000000000
+                Position.Y = 28.000000000000000000
+                Size.Width = 83.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                object LnDtReposicao: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 83.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object EdtZona: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 2
+                TabStop = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 208.000000000000000000
+                Position.Y = 28.000000000000000000
+                Size.Width = 149.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                object LnZona: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 149.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object LblDtReposicao: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 108.000000000000000000
+                Position.Y = 8.000000000000000000
+                Size.Width = 84.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Dt.Reposi'#231#227'o'
+                TabOrder = 3
+              end
+              object LblZona: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 208.000000000000000000
+                Position.Y = 8.000000000000000000
+                Size.Width = 32.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Zona'
+                TabOrder = 4
+              end
+              object EdtReposicaoId: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 0
+                TabStop = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 4.000000000000000000
+                Position.Y = 28.000000000000000000
+                Size.Width = 83.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                object Line1: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 83.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+            end
+            object LytBottom: TLayout
+              Align = Bottom
+              Position.Y = 475.000000000000000000
+              Size.Width = 364.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 5
+            end
+            object LytColeta: TLayout
+              Align = Client
+              Size.Width = 364.000000000000000000
+              Size.Height = 408.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 6
+              object Rct01Produto: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 2.000000000000000000
+                Margins.Right = 2.000000000000000000
+                Margins.Bottom = 2.000000000000000000
+                Position.X = 2.000000000000000000
+                Size.Width = 360.000000000000000000
+                Size.Height = 101.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = claNull
+                object EdtCodProduto: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 0
+                  TabStop = False
+                  TextSettings.Font.Family = 'Roboto Th'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.VertAlign = Trailing
+                  Position.X = 4.000000000000000000
+                  Position.Y = 18.000000000000000000
+                  Size.Width = 83.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, FontColor]
+                  object LnCodProduto: TLine
+                    Align = Bottom
+                    LineType = Bottom
+                    Position.Y = 28.000000000000000000
+                    Size.Width = 83.000000000000000000
+                    Size.Height = 4.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = claChocolate
+                  end
+                end
+                object LblProduto: TLabel
+                  AutoSize = True
+                  StyledSettings = [FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 2.000000000000000000
+                  Size.Width = 51.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Produto'
+                  TabOrder = 1
+                end
+                object LblEmbalagem: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 56.000000000000000000
+                  Size.Width = 75.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Embalagem'
+                  TabOrder = 2
+                end
+                object LblPicking: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 120.000000000000000000
+                  Position.Y = 56.000000000000000000
+                  Size.Width = 47.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Picking'
+                  TabOrder = 3
+                end
+                object LblZonaProduto: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 246.000000000000000000
+                  Position.Y = 56.000000000000000000
+                  Size.Width = 32.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Zona'
+                  TabOrder = 4
+                end
+                object TxtEmbalagem: TLabel
+                  AutoSize = True
+                  StyledSettings = []
+                  Position.X = 4.000000000000000000
+                  Position.Y = 74.000000000000000000
+                  Size.Width = 13.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.FontColor = claChocolate
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = '...'
+                  TabOrder = 5
+                end
+                object TxtPicking: TLabel
+                  AutoSize = True
+                  StyledSettings = []
+                  Position.X = 120.000000000000000000
+                  Position.Y = 74.000000000000000000
+                  Size.Width = 18.000000000000000000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 20.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.FontColor = claChocolate
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = '...'
+                  TabOrder = 6
+                end
+                object TxtZona: TLabel
+                  AutoSize = True
+                  StyledSettings = []
+                  Position.X = 248.000000000000000000
+                  Position.Y = 74.000000000000000000
+                  Size.Width = 13.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.FontColor = claChocolate
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = '...'
+                  TabOrder = 7
+                end
+                object TxtProduto: TLabel
+                  StyledSettings = [Style]
+                  Position.X = 96.000000000000000000
+                  Position.Y = 24.000000000000000000
+                  Size.Width = 263.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.FontColor = claChocolate
+                  TextSettings.Trimming = None
+                  Text = '...'
+                  TabOrder = 8
+                end
+              end
+              object Rct02Coleta: TRectangle
+                Align = Top
+                Fill.Color = claWhite
+                Margins.Left = 2.000000000000000000
+                Margins.Right = 2.000000000000000000
+                Margins.Bottom = 2.000000000000000000
+                Position.X = 2.000000000000000000
+                Position.Y = 103.000000000000000000
+                Size.Width = 360.000000000000000000
+                Size.Height = 136.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = claNull
+                object LblColeta: TLabel
+                  AutoSize = True
+                  StyledSettings = [FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 4.000000000000000000
+                  Size.Width = 155.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Informa'#231#245'es para Coleta'
+                  TabOrder = 0
+                end
+                object LblLote: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 24.000000000000000000
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Lote'
+                  TabOrder = 1
+                end
+                object LblVencimento: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 124.000000000000000000
+                  Position.Y = 24.000000000000000000
+                  Size.Width = 75.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Vencimento'
+                  TabOrder = 2
+                end
+                object TxtLote: TLabel
+                  AutoSize = True
+                  StyledSettings = []
+                  Position.X = 4.000000000000000000
+                  Position.Y = 44.000000000000000000
+                  Size.Width = 16.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 18.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.FontColor = claChocolate
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = '...'
+                  TabOrder = 3
+                end
+                object TxtVencimento: TLabel
+                  AutoSize = True
+                  StyledSettings = []
+                  Position.X = 124.000000000000000000
+                  Position.Y = 44.000000000000000000
+                  Size.Width = 16.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 18.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.FontColor = claChocolate
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = '...'
+                  TabOrder = 4
+                end
+                object LblDemanda: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 78.000000000000000000
+                  Size.Width = 61.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Demanda'
+                  TabOrder = 5
+                end
+                object LblDisponivel: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 124.000000000000000000
+                  Position.Y = 78.000000000000000000
+                  Size.Width = 90.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Est.Dispon'#237'vel'
+                  TabOrder = 6
+                end
+                object EdtDemanda: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 7
+                  TabStop = False
+                  TextSettings.Font.Family = 'Roboto Th'
+                  TextSettings.Font.Size = 20.000000000000000000
+                  TextSettings.HorzAlign = Trailing
+                  TextSettings.VertAlign = Trailing
+                  Position.X = 4.000000000000000000
+                  Position.Y = 96.000000000000000000
+                  Size.Width = 83.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                  object LnDemanda: TLine
+                    Align = Bottom
+                    LineType = Bottom
+                    Position.Y = 28.000000000000000000
+                    Size.Width = 83.000000000000000000
+                    Size.Height = 4.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = claChocolate
+                  end
+                end
+                object EdtDisponivel: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 8
+                  TabStop = False
+                  TextSettings.Font.Family = 'Roboto Th'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.HorzAlign = Trailing
+                  TextSettings.VertAlign = Trailing
+                  Position.X = 126.000000000000000000
+                  Position.Y = 96.000000000000000000
+                  Size.Width = 87.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                  object LnDisponivel: TLine
+                    Align = Bottom
+                    LineType = Bottom
+                    Position.Y = 28.000000000000000000
+                    Size.Width = 87.000000000000000000
+                    Size.Height = 4.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = claChocolate
+                  end
+                end
+              end
+              object Rct03Apanhe: TRectangle
+                Align = Client
+                Fill.Color = claWhite
+                Margins.Left = 2.000000000000000000
+                Margins.Right = 2.000000000000000000
+                Margins.Bottom = 2.000000000000000000
+                Size.Width = 360.000000000000000000
+                Size.Height = 165.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = claNull
+                object LblApanhe: TLabel
+                  AutoSize = True
+                  StyledSettings = [FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 6.000000000000000000
+                  Size.Width = 41.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Coleta'
+                  TabOrder = 4
+                end
+                object EdtEndereco: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 0
+                  ReadOnly = True
+                  TextSettings.Font.Family = 'Roboto Th'
+                  TextSettings.Font.Size = 20.000000000000000000
+                  TextSettings.HorzAlign = Trailing
+                  TextSettings.VertAlign = Trailing
+                  Position.X = 4.000000000000000000
+                  Position.Y = 46.000000000000000000
+                  Size.Width = 127.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                  OnKeyUp = EdtEnderecoKeyUp
+                  OnExit = EdtEnderecoExit
+                  object LnEndereco: TLine
+                    Align = Bottom
+                    LineType = Bottom
+                    Position.Y = 28.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 4.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = claChocolate
+                  end
+                end
+                object LblEndereco: TLabel
+                  AutoSize = True
+                  StyledSettings = []
+                  Position.X = 144.000000000000000000
+                  Position.Y = 46.000000000000000000
+                  Size.Width = 21.000000000000000000
+                  Size.Height = 29.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 24.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.FontColor = claChocolate
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = '...'
+                  TabOrder = 2
+                end
+                object LblEnderecoColeta: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 59.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Endere'#231'o'
+                  TabOrder = 5
+                end
+                object EdtQtdApanhe: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 3
+                  ReadOnly = True
+                  TextSettings.Font.Family = 'Roboto Th'
+                  TextSettings.Font.Size = 20.000000000000000000
+                  TextSettings.HorzAlign = Trailing
+                  TextSettings.VertAlign = Trailing
+                  Position.X = 170.000000000000000000
+                  Position.Y = 114.000000000000000000
+                  Size.Width = 127.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                  OnKeyUp = EdtQtdApanheKeyUp
+                  object LnQtdApanhe: TLine
+                    Align = Bottom
+                    LineType = Bottom
+                    Position.Y = 28.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 4.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = claChocolate
+                  end
+                end
+                object LblQtdApanhe: TLabel
+                  AutoSize = True
+                  StyledSettings = [Style, FontColor]
+                  Position.X = 214.000000000000000000
+                  Position.Y = 96.000000000000000000
+                  Size.Width = 82.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Qtd.Coletada'
+                  TabOrder = 6
+                end
+                object Label1: TLabel
+                  AutoSize = True
+                  StyledSettings = [FontColor]
+                  Position.X = 4.000000000000000000
+                  Position.Y = 96.000000000000000000
+                  Size.Width = 51.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Font.Family = 'Roboto'
+                  TextSettings.Font.Size = 14.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  TextSettings.WordWrap = False
+                  TextSettings.Trimming = None
+                  Text = 'Produto'
+                  TabOrder = 7
+                end
+                object EdtEan: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  TabOrder = 1
+                  ReadOnly = True
+                  TextSettings.Font.Family = 'Roboto Th'
+                  TextSettings.Font.Size = 20.000000000000000000
+                  TextSettings.HorzAlign = Trailing
+                  TextSettings.VertAlign = Trailing
+                  Position.X = 4.000000000000000000
+                  Position.Y = 114.000000000000000000
+                  Size.Width = 159.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Style, FontColor]
+                  OnValidate = EdtEanValidate
+                  OnKeyDown = EdtEanKeyDown
+                  OnExit = EdtEnderecoExit
+                  object Line2: TLine
+                    Align = Bottom
+                    LineType = Bottom
+                    Position.Y = 28.000000000000000000
+                    Size.Width = 159.000000000000000000
+                    Size.Height = 4.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Color = claChocolate
+                  end
+                end
+              end
+            end
+          end
+          inherited TabConfirmacao: TTabItem
+            ExplicitSize.cx = 8.000000000000000000
+            ExplicitSize.cy = 8.000000000000000000
+            inherited RctConfirmacao: TRectangle
+              inherited LytTopConfirmacao: TLayout
+                inherited RctTopConfirmacao: TRectangle
+                  inherited LytTituloConfirmacao: TLayout
+                    inherited LblTituloConfirmacao: TLabel
+                      TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    end
+                  end
+                end
+              end
+              inherited LytCenterConfirmacao: TLayout
+                inherited LytMsgConfirmacao: TLayout
+                  inherited LytMensagens: TLayout
+                    inherited LytMensagem1: TLayout
+                      inherited LblMensagem1: TLabel
+                        TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      end
+                    end
+                  end
+                end
+                inherited LytButtonConfirmacao: TLayout
+                  inherited LytBtnConfirma: TLayout
+                    inherited RctBtnConfirma: TRectangle
+                      inherited lbl_BtnConfirma: TLabel
+                        TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      end
+                      inherited LytConfirma: TLayout
+                        inherited img_Confirma: TImage
+                          MultiResBitmap.Height = 10
+                          MultiResBitmap.Width = 60
+                        end
+                      end
+                    end
+                  end
+                  inherited LytBtnCancel: TLayout
+                    inherited RctbtnCancel: TRectangle
+                      inherited img_iconeCancel: TImage
+                        MultiResBitmap.Height = 64
+                        MultiResBitmap.Width = 64
+                        MultiResBitmap = <
+                          item
+                            Width = 64
+                            Height = 64
+                            PNG = {
+                              89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+                              DE0000000473424954080808087C0864880000021649444154789CED9B2B8F14
+                              411485CFBD61487060C6918087101E1E815ABF9A058543F32F70285E3F80E050
+                              8BC7B109601024DD62DD008604D1DBF76026886537DBD55D35673AD4272755F7
+                              9EFB65AA45A70BA8542A95FF181BB389E425000F22E296995D9812C0DD774FA8
+                              FF18C02F00AFCC8C53EA6787E44ED77587CCC4493D22E20D49F67DFF82A46F7A
+                              C6532179BB699A2ED7F06709584B78B91512485ADFF79F730E3F444069092945
+                              6FBAFBB51221CEC2DD1F46C4F31212520A5EC9DD3C855212528AC9CF610909F2
+                              A152C92D61760280BC12662900C82761B602803C12662D00982E61F602806912
+                              B652809945EA9EB112B65240447C1DB36F2DE159D29E318D4AE3EE4F23E2D3C8
+                              BD8F48DE18BAFEDC98263921E9C7FFF266F683E41D0077015C1C51763574A15C
+                              0080AB00BE1DFFD1CC3A00EF4B37971F8188B8AFEC2F17B05AAD9E90BCAEEA2F
+                              17B05C2ECF775DF78EE43D45FF6D780660B1585C6E9A663F22DE9AD93E80EF13
+                              4B7E30B3C31CD9FE427237F7EBB082FCF3A6F934E447404D15A00EA0A60A5007
+                              505305A803A8A902D401D45401EA006AAA0075003555803A809A2A401D404D15
+                              A00EA0A60A5007505305A803A8A902D401D4A40848FE6C45C8E0AC29029AF41C
+                              329AA10B53041C44C497F42C9B659DF160E8FAC102CC8CEEBED7B6EDD1A8641B
+                              A06DDB2377DF2B7ACD8699AFCCE4629D6927751EF9A5A9A990FCEDEE1F01BC36
+                              B39FCA2C954AA5323BFE0022282A447D3908990000000049454E44AE426082}
+                            FileName = 
+                              'D:\99Coders\Posts\168 - Animando botao de download no Delphi ---' +
+                              '---\Fontes\Images\pdf.png'
+                          end>
+                      end
+                      inherited lbl_BtnCancel: TLabel
+                        TextSettings.Font.StyleExt = {00070000000000000004000000}
+                      end
+                      inherited img_Cancel: TImage
+                        MultiResBitmap.Height = 64
+                        MultiResBitmap.Width = 64
+                        MultiResBitmap = <
+                          item
+                            Width = 64
+                            Height = 64
+                            PNG = {
+                              89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+                              DE0000000473424954080808087C0864880000077A49444154789CED5B5B6C1C
+                              5719FEFE33BB8EBDF1DA4945A06EF165BD4E9B9287406FD43BBB6611AA110F08
+                              5129D0F412425B1042EA051551815A94B6A92A155A0A7DE2A22AA036A10D45A4
+                              044AA354AC7667D7346A445561E124BE6CBDD40A3C74DDACED5DEFEE9C9F07E2
+                              CA7B99F1CCAC6748D27E8FFFF9FFFF7CE79B3373AE037C880F36C8AB8AA62291
+                              EB48885106FCA68488CA82E8958164F2EF5EF0F24480A96874D7DBC0F30316EB
+                              9B05642FF3CE703AFD7B97A941B85D010030F0D0800DB1FB0041443F7091D2FB
+                              F044808542216437A65CA984DDE0520FD75F81D3B1D81685F93F4E62CBCC5DDB
+                              D2E9C27A735A0DD77B801FE8751AAB007DEBC9A5195C17805B10C07F510820A5
+                              63012491E358ABF0E223D8CA53BCB07BC04C3C3E0021A22DA4189952555745B0
+                              340A4C47A3BB89F96B209A07F0CB014D7B950036F2CF8E8C5C25A57CB898CFDF
+                              D4B179B3D20AC1623EAF07BABB5F9442EC0D6BDA29233F06685A55BF40C03799
+                              A88B80FD839AF69BB5F2AF29C074347A3B809A4412382980678A3EDFAFB72712
+                              0B2BF6F178BCB3A35A7D0CB9DCB7D1DBEB5B2BB74D5424D14F3754AB3FEC1D1B
+                              2BAE18275435D826C41EE8FADD1062EBEA00066E096BDA41B3A4A6024CA86AB0
+                              8DE834808F3575607E8F806749519E01F366667E910157273012382988BEA2EB
+                              FAA210E26E02BE0EA0CBC077AE3310B8E2D2A347178DF2997E03DA808760D478
+                              0020EA66A2EF64A59C94CC636E371E0004702596978FBF23C42902EE8541E3CF
+                              F95EB6B4B8683AA536EC0193C3C3434251C601B439A7FBFFC7D942A1B4A9BBFB
+                              1303C9E44CB372E31EE0F33D890BBCF100D0150CB64B5DFF915179D31E30ADAA
+                              3782E8A87BB4BC07019F0D695AA2DEDED003FE1A8FFB88E8279EB0F21055E069
+                              DEB9B361486E10A0BF52F91603DBBDA1E51D146047766EEE1BF5F61A01182010
+                              3DE81D2D6F219BB4AD46806C3CBE0166C3DE058E1CD053FF1AD408104A244A60
+                              3EE616812CC092E86562BE590AD117D23425A4690A33F713D12E4879246B32C5
+                              6E157D52FE990E1DD257DB1A468193F1F8477CBAFE3C318FAE6BEDCC6F0945D9
+                              B3D66EEF94AA5E2B88F6AFFB7748CA238A10BBFB352DBFDADC74186480B2D1E8
+                              F73897DBB71E737A263ADAB1B4F4E5CB4E9C58B2E27F667474E3D2C2C26108F1
+                              B956EB065026E60742E9F4D3CD0A4DD702D94864785988837EA0DF71F5CC6FB5
+                              974AC3561BBF82F178BC7343B57A5C005739AD9A80291DF8EA90A69D30F2315D
+                              0B0C643263EDC0A758CA3F382190055828CA1EBB8D0780ED89C482C27C87937A
+                              0100442F542B95ABCD1A0FD8D8159E89465F62E0263B1C24D1CB43A9D497ECC4
+                              D463321AFD8B003E6F27868003214DBBD58AAFE51DA1B58EB49A4191F280DD98
+                              7A08C0760EB6B186B1BE254674A95D22BAA264ECC634E490326D3786993F6AD5
+                              D7B20092B9D32E917032F98EDD98067477FFCB768C0DAE9E1C8D9DCFB02C8000
+                              6C1F514DABEAC7EDC6D483E6E76D9F0DB00DAE767AC0BFED12114244ECC6D443
+                              11427550AFE5B3483BA340D52E11D6754B4391690E22DB3918D0D7F6FA1FD69C
+                              07E486872FA928CA7E005FB44B240B703FF3F5E174FA0DBBB10030198BA98259
+                              73120BE697B8A3E3CEF0B163EF99B9990A30198BA942D70F4208C76774048C77
+                              04029F36DB9A6E8609550DB631BF0121AE705A37EBFA0CF97C370FA652C78D7C
+                              9ABE020CD094AA7E5FCCCE265A69FCB95CDB9716160E8FC7E39687A609550DFA
+                              98FFD84AE30180142504666D3A1ABD9F0D1E7683F1742CB64500CFADF7725802
+                              FF5498EF08A5D37F33F33BD7EB9E6DB5F14DF027BFAEEFEE1D1B7B77B5B14180
+                              E948E4D83A2D439B4202AF0AE0802E657A659243F3F3BD8A10EAB90FDE8D6ED5
+                              0D298F0C663235DFB21A0166E2F176AE568BB848310BC8CFF4F4B4ADDE15AA11
+                              80013AA5AA737E07F3FE0B0252E60633999AE3F69A8F2001EC237AD45B561E42
+                              887D0DA67AC3604FCFCF01FCC313421E828137439AF6AB7A7B830074E890CE44
+                              F77943CB3B9010F71220EBED4DE701E154EA35301F769F9667F8DD6032996C56
+                              60B816D099EF0750768D9247385B289420E5778DCA0D05D89AC94C31D0742BB9
+                              1EC57C5E47B9BCEC84A0139C2D144AC57CDED282A72B187C72309379DBA8DC74
+                              355861DE57613E6354AE03EF32F044FBA64D83E4F3DD00294F5B21D50A7460A2
+                              73E3C6EB025BB60C49A21F972B9579235F09CC050281C7CDF239BA2445C03803
+                              3F6B2F169F5BBDE53D77CD35815247C7A3C8E5EE71E39214034F099F6F6F2891
+                              28AD18CF8C8E6E5C2C16774BE67B14605B0D4FA25DA154EAB76649AD5E93BB9D
+                              896E63E67922FA4538957ACDD45F55AF64A2BDA57C7E67ABD7E490CB55E5E597
+                              1F64E0E1AD99CC94911B03948DC54699F92E26EA02F3FEB56E88012EDF169F1C
+                              19E915CC2F8079D8493C3327FDC0AEBE747A6EBDB9ADC0D54DD1A1643207E631
+                              A7F1449472B3F18007BBC204CCB610DE4AAC259CD702B4289E25B82E80CE9C73
+                              1A5B6D21D62ADCFF5F80D9F153D43DE8019EFC36F7E68E1DC5AE60B0DD4E4CB9
+                              5299DFF6FAEB9BDDE2B4024F8EC68281C0B4DD9836BF7FD20D2EF5F0440021C4
+                              23B34D96A24628E6F33A983DD998F1ECD7D99948E49350945166363FBB275A96
+                              BAFECA502673D16DCA7C88F311FF054F2FB67B979879100000000049454E44AE
+                              426082}
+                            FileName = 
+                              'D:\99Coders\Posts\168 - Animando botao de download no Delphi ---' +
+                              '---\Fontes\Images\gear2.png'
+                          end>
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+          object TabReposicaoTransferencia: TTabItem
+            CustomIcon = <
+              item
+              end>
+            TextSettings.Trimming = None
+            IsSelected = True
+            Size.Width = 8.000000000000000000
+            Size.Height = 8.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'TabReposicaoTransferencia'
+            object Rct01ProdutoTransferencia: TRectangle
+              Align = Top
+              Fill.Color = claWhite
+              Margins.Left = 2.000000000000000000
+              Margins.Right = 2.000000000000000000
+              Margins.Bottom = 2.000000000000000000
+              Position.X = 2.000000000000000000
+              Size.Width = 360.000000000000000000
+              Size.Height = 101.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claNull
+              object EdtCodProdutoTransferencia: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 0
+                TabStop = False
+                ReadOnly = True
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.VertAlign = Trailing
+                Position.X = 6.000000000000000000
+                Position.Y = 16.000000000000000000
+                Size.Width = 83.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, FontColor]
+                OnTyping = EdtCodProdutoTransferenciaTyping
+                OnKeyUp = EdtCodProdutoTransferenciaKeyUp
+                OnExit = EdtCodProdutoTransferenciaExit
+                object Line3: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 83.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object Label6: TLabel
+                AutoSize = True
+                StyledSettings = [FontColor]
+                Position.X = 4.000000000000000000
+                Position.Y = 2.000000000000000000
+                Size.Width = 50.400001525878910000
+                Size.Height = 17.600000381469730000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Produto'
+                TabOrder = 1
+                TabStop = False
+              end
+              object Label7: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 4.000000000000000000
+                Position.Y = 56.000000000000000000
+                Size.Width = 74.400001525878910000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Embalagem'
+                TabOrder = 2
+                TabStop = False
+              end
+              object Label8: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 116.000000000000000000
+                Position.Y = 56.000000000000000000
+                Size.Width = 46.399993896484380000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Picking'
+                TabOrder = 3
+                TabStop = False
+              end
+              object Label9: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 238.000000000000000000
+                Position.Y = 56.000000000000000000
+                Size.Width = 32.000000000000000000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Zona'
+                TabOrder = 4
+                TabStop = False
+              end
+              object LblEmbalagemTransferencia: TLabel
+                AutoSize = True
+                StyledSettings = []
+                Position.X = 4.000000000000000000
+                Position.Y = 74.000000000000000000
+                Size.Width = 12.799999237060550000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claChocolate
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = '...'
+                TabOrder = 5
+                TabStop = False
+              end
+              object LblPickingTransferencia: TLabel
+                AutoSize = True
+                StyledSettings = []
+                Position.X = 116.000000000000000000
+                Position.Y = 74.000000000000000000
+                Size.Width = 17.600006103515630000
+                Size.Height = 24.800003051757810000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 20.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claChocolate
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = '...'
+                TabOrder = 6
+                TabStop = False
+              end
+              object LblZonaTransferencia: TLabel
+                AutoSize = True
+                StyledSettings = []
+                Position.X = 242.000000000000000000
+                Position.Y = 74.000000000000000000
+                Size.Width = 12.800003051757810000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claChocolate
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = '...'
+                TabOrder = 7
+                TabStop = False
+              end
+              object LblProdutoTransferencia: TLabel
+                StyledSettings = [Style]
+                Position.X = 97.000000000000000000
+                Position.Y = 10.000000000000000000
+                Size.Width = 263.000000000000000000
+                Size.Height = 41.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.FontColor = claChocolate
+                TextSettings.Trimming = None
+                Text = '...'
+                TabOrder = 8
+                TabStop = False
+              end
+            end
+            object Rct02Transferencia: TRectangle
+              Align = Top
+              Fill.Color = claWhite
+              Margins.Left = 2.000000000000000000
+              Margins.Right = 2.000000000000000000
+              Margins.Bottom = 2.000000000000000000
+              Position.X = 2.000000000000000000
+              Position.Y = 103.000000000000000000
+              Size.Width = 360.000000000000000000
+              Size.Height = 140.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claNull
+              object Label14: TLabel
+                AutoSize = True
+                StyledSettings = [FontColor]
+                Position.X = 4.000000000000000000
+                Position.Y = 6.000000000000000000
+                Size.Width = 86.400001525878910000
+                Size.Height = 17.600000381469730000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Transfer'#235'ncia'
+                TabOrder = 3
+                TabStop = False
+              end
+              object EdtEnderecoTransferencia: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 1
+                ReadOnly = True
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 20.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                TextSettings.VertAlign = Trailing
+                Position.X = 4.000000000000000000
+                Position.Y = 102.000000000000000000
+                Size.Width = 127.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                OnTyping = EdtEnderecoTransferenciaTyping
+                OnKeyUp = CbLoteTransferenciaKeyUp
+                OnExit = EdtEnderecoTransferenciaExit
+                object Line4: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 127.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object Label16: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 4.000000000000000000
+                Position.Y = 84.000000000000000000
+                Size.Width = 58.400001525878910000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Endere'#231'o'
+                TabOrder = 4
+                TabStop = False
+              end
+              object EdtQtdTransferencia: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                TabOrder = 2
+                ReadOnly = True
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 20.000000000000000000
+                TextSettings.HorzAlign = Trailing
+                TextSettings.VertAlign = Trailing
+                Position.X = 170.000000000000000000
+                Position.Y = 103.000000000000000000
+                Size.Width = 127.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
+                OnTyping = EdtQtdTransferenciaTyping
+                OnKeyUp = EdtQtdTransferenciaKeyUp
+                object Line5: TLine
+                  Align = Bottom
+                  LineType = Bottom
+                  Position.Y = 28.000000000000000000
+                  Size.Width = 127.000000000000000000
+                  Size.Height = 4.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = claChocolate
+                end
+              end
+              object Label17: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 198.000000000000000000
+                Position.Y = 86.000000000000000000
+                Size.Width = 98.399993896484380000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Qtd.Transferida'
+                TabOrder = 5
+                TabStop = False
+              end
+              object Label18: TLabel
+                AutoSize = True
+                StyledSettings = [FontColor]
+                Position.X = 4.000000000000000000
+                Position.Y = 26.000000000000000000
+                Size.Width = 28.000000000000000000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Lote'
+                TabOrder = 6
+              end
+              object CbLoteTransferencia: TComboBox
+                Enabled = False
+                Position.X = 10.000000000000000000
+                Position.Y = 42.000000000000000000
+                Size.Width = 133.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                OnKeyUp = CbLoteTransferenciaKeyUp
+                OnExit = CbLoteTransferenciaExit
+              end
+              object Label11: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 242.000000000000000000
+                Position.Y = 28.000000000000000000
+                Size.Width = 75.200012207031250000
+                Size.Height = 17.599998474121090000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = 'Vencimento'
+                TabOrder = 7
+                TabStop = False
+              end
+              object LblVencimentoTransferencia: TLabel
+                StyledSettings = []
+                Position.X = 204.000000000000000000
+                Position.Y = 56.000000000000000000
+                Size.Width = 127.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto'
+                TextSettings.Font.Size = 18.000000000000000000
+                TextSettings.Font.StyleExt = {00070000000000000004000000}
+                TextSettings.FontColor = claChocolate
+                TextSettings.HorzAlign = Trailing
+                TextSettings.WordWrap = False
+                TextSettings.Trimming = None
+                Text = '31/12/2024'
+                TabOrder = 8
+                TabStop = False
+              end
+            end
+            object LytFootTransferencia: TLayout
+              Position.Y = 246.000000000000000000
+              Size.Width = 364.000000000000000000
+              Size.Height = 258.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 5
+              object RctTituloTransferencia: TRectangle
+                Align = Top
+                Fill.Color = xFFD8E8EF
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 3.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Position.X = 5.000000000000000000
+                Position.Y = 3.000000000000000000
+                Size.Width = 354.000000000000000000
+                Size.Height = 34.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = claNull
+                object Label2: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Size.Width = 47.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Trailing
+                  TextSettings.Trimming = None
+                  Text = 'C'#243'digo'
+                  TabOrder = 0
+                end
+                object Label3: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.X = 44.000000000000000000
+                  Size.Width = 69.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Descri'#231#227'o'
+                  TabOrder = 1
+                end
+                object Label4: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.X = 66.000000000000000000
+                  Position.Y = 16.000000000000000000
+                  Size.Width = 111.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.Trimming = None
+                  Text = 'Lote'
+                  TabOrder = 2
+                end
+                object Label5: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.X = 176.000000000000000000
+                  Position.Y = 16.000000000000000000
+                  Size.Width = 77.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Vencto'
+                  TabOrder = 3
+                end
+                object Label10: TLabel
+                  StyledSettings = [Family, Style, FontColor]
+                  Position.X = 264.000000000000000000
+                  Position.Y = 16.000000000000000000
+                  Size.Width = 65.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Trailing
+                  TextSettings.Trimming = None
+                  Text = 'Saldo'
+                  TabOrder = 4
+                end
+              end
+              object LstTransferenciaEstoque: TListView
+                Touch.InteractiveGestures = [LongTap]
+                OnGesture = LstPrincipalGesture
+                ItemAppearanceClassName = 'TDynamicAppearance'
+                ItemEditAppearanceClassName = 'TDynamicAppearance'
+                HeaderAppearanceClassName = 'TListHeaderObjects'
+                FooterAppearanceClassName = 'TListHeaderObjects'
+                ItemSpaces.Left = 3.000000000000000000
+                ItemSpaces.Right = 3.000000000000000000
+                Align = Client
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 5.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 5.000000000000000000
+                Size.Width = 354.000000000000000000
+                Size.Height = 211.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                ItemAppearance.ItemHeight = 60
+                ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+                  item
+                    AppearanceObjectName = 'Image2'
+                    AppearanceClassName = 'TImageObjectAppearance'
+                    Appearance.ScalingMode = Stretch
+                    Appearance.Width = 330.000000000000000000
+                    Appearance.Height = 60.000000000000000000
+                    Appearance.PlaceOffset.Y = 1.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'Image3'
+                    AppearanceClassName = 'TImageObjectAppearance'
+                    Appearance.Width = 25.000000000000000000
+                    Appearance.Height = 30.000000000000000000
+                    Appearance.PlaceOffset.X = 330.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'CodProduto'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Leading
+                    Appearance.Width = 60.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'Descricao'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Leading
+                    Appearance.Width = 260.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 63.000000000000000000
+                    Appearance.PlaceOffset.Y = 2.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'Lote'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Leading
+                    Appearance.Width = 89.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 63.000000000000000000
+                    Appearance.PlaceOffset.Y = 28.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'Vencimento'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Leading
+                    Appearance.Width = 100.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 157.000000000000000000
+                    Appearance.PlaceOffset.Y = 28.000000000000000000
+                  end
+                  item
+                    AppearanceObjectName = 'Saldo'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                    Appearance.TextAlign = Trailing
+                    Appearance.Width = 60.000000000000000000
+                    Appearance.Height = 20.000000000000000000
+                    Appearance.PlaceOffset.X = 263.000000000000000000
+                    Appearance.PlaceOffset.Y = 28.000000000000000000
+                  end>
+                ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+                  item
+                    AppearanceObjectName = 'Text1'
+                    AppearanceClassName = 'TTextObjectAppearance'
+                  end>
+                ItemAppearanceObjects.FooterObjects.Text.Width = 332.000000000000000000
+                ItemAppearanceObjects.FooterObjects.Text.Height = 34.000000000000000000
+                ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = -10.000000000000000000
+                CanSwipeDelete = False
+              end
+            end
+          end
+        end
+        inherited LytAutorizacao: TLayout
+          inherited RctAutorizacao: TRectangle
+            inherited lytAutorizaCenterLogin: TLayout
+              inherited RctAutorizaCenterLogin: TRectangle
+                inherited EdtUsuarioCtrlSeg: TEdit
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited EdtSenhaCtrlSeg: TEdit
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited BtnLogIn: TRectangle
+                  inherited LblLogin: TLabel
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  end
+                end
+              end
+            end
+          end
+        end
+        inherited LytShowErro: TLayout
+          inherited RctShowErro: TRectangle
+            inherited LytBodyShowErro: TLayout
+              inherited Rectangle5: TRectangle
+                inherited LblMsg01ShowErro: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited LblMsg02ShowErro: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+                inherited RctBtnOkShowErro: TRectangle
+                  inherited LblBtnOkShowErro: TLabel
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+      inherited LytTopForm: TLayout
+        inherited RctTopForm: TRectangle
+          inherited RctTitle: TRectangle
+            inherited LblTituloForm: TLabel
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+            inherited CircMenu: TCircle
+              Fill.Bitmap.Bitmap.PNG = {
+                89504E470D0A1A0A0000000D49484452000000F0000000EE080600000007898A
+                790000000473424954080808087C0864880000200049444154789CED9D7F7C9C
+                5595FF3FE73E9399A6453A28052499E99445692605A702CD24804CABA2E22E6D
+                F1D7D71FAB893469FDC136E5BBA2EBD7B52DAEEB226A5B41E90FD81675DDEFBA
+                EEB7655D51F99514B099544A07A509F872E93449412DCAB46C9BCE3373EFF9FE
+                3199749ACEAFE7995F497ADFFF3499B9F7B9279DF93CE73EF79E7B8E01CDB4C4
+                1708B95F77DE453F7BDD05DE675F3B32FCFB5ADBA3A90CA2D60668CACF45975E
+                37479AC79F00219494B2A7C1DF16A8B54D9ACA40B53640535E3C0BDAFE4229F5
+                A8007CE9D74CC9B11982DE7E6830FC4C0D4DD354002DE069846F7ED09710E8C9
+                14EF38122708B861E885F02FAB6F99A652E829F434C1F7E6D6F939C50B000666
+                B281A71A17044355354C5351B4079E0634342F7A0B311E2488B9C5B46781C523
+                CF857B2B6C96A60A68014F71520B546A674ECF9B032DE2E98116F014A6C1DF16
+                1052FD270C78ECF4D7229EFAE867E0294A83BF2D9094B2C7AE780180147A1AFD
+                C1F794D32E4D75D1029E82A4C5EB34C85DEAB50878A8D11FFC6839ECD2541FA3
+                D60668AC31D7DFBAD094AA2CE24D43C0CDB3E7341E3A76642452AE6B6AAA8316
+                F014A2C1DF1628B7783358A6453CF5D0029E22789ADBAE4E48F95885C49B468B
+                788AA1053C05685C100C2592EAA715166F9A65E79EEF1939F6CAC8FE2A8CA529
+                112DE0498EA739785322C9FFD79E78D54F00BACC6A2F22DC74EE1CCF9F8E1D19
+                D96B7D4C4D35D1ABD09318CF82961BCC243F604BBCC41B8707F6DEC4028BED8C
+                4DE0BBBD4D2DABEDF4D5540FED8127291E7F4B8799C47D76C44B84AF0F1FE8FF
+                5B0038F6C791E8B91736EE2646BB652388DE3D7B4EE36BC78E8CF459EEABA90A
+                5AC093106F73F013A6C4065BE205D60F0D84BF94F95A492206DE35FBFCC6E4B1
+                57469EB4D1575361B48027195E7F4B575CE29B76C4CBC0BAE181F0FA6CEF95E6
+                89B1E4DC398D38766464B7E5BE9A8AA2053C89F036B57627095FAD1376C44BB7
+                8E0C84EFCAD7A61411131072CF69A4A347467AADF6D5540E7D986192E06D6AED
+                3E4A27BE762EEA67D8E8DE313C10DE51F458FE966B19646B4ACC449B460EF475
+                DBE9AB293F7A157A12E06D6AED06C5EFB02CDEE32F276151BC003034D0FF9460
+                5C6969AC318879756373EB463B7D35E5477BE01AE36D6AED66E20D56FB999263
+                4E83D658156F260DFEB680807A06B6BE07BC6B78A07FB9DDB135E5417BE01A52
+                4BF102C0E1813D1105F1D663183D69BD372D6B680E3E5CCAF89AD2D11EB84694
+                225E9710AB8706FBBE572E5B4A3A9EC8E81D1E0CDB0A16D1948E16700DF0FA5B
+                BEC0A0AF59ED674A8E3985E8181EECDB556E9BB488A7267A0A5D0394A0B0D53E
+                95142F909A4ECF00BFD5941CB3DC59B03EBD5423B4806BC0C873E15E2B31CA95
+                166F9A432FEC3DE8AC33AEB2226202DF317CA07F4D25EDD2E4460BB846142BE2
+                6A8937CDF0737BFE5B082300C8DF146ACB446B8706FAD756C32E4D76F433708D
+                695C100C91424FB6F7AA2DDE4C7CFEAB2F4A42F410687EB6F799E9F691C1BEBC
+                915F9ACAA3053C09F0F8175D078827325FABA578D3782FBFF63C9889C7D9A0D3
+                8AA331D38A91C1BEFB6B6597E6145AC09304EFFC962B59D0D3404ABC86833EFE
+                D281F04F6A6D972F1072ABD1D19E0C115B8EFCD268CE0A1AFDC1960B2F6B79D5
+                D3D4BAACD6B664E20B84DC0D4DC1273DFE607BAD6DD19C8EA3D606684E317C7D
+                F8B77F3EE978FCF5947C8C066B6DCD290E067AA19C785A302234506B6B3499E8
+                55E84902AF424352A2EFF575C99B95034F703BAA91C0AE20DC0EB772E26E0174
+                C7093DDC095D2C7C12A19F812701DC8139CAC06342E0F2F46B0A880820445B71
+                B46676B5C3CD4EDC4FC0CDE9D7E240CCC5584CDBA083372601DA03D718BE0597
+                4A81BD99E20500010492405FAD3C31B7C3CD75D89E295E007001EE314F7C7D2D
+                ECD29C8EF6C0358457609E643C6E18B94B834AE0A061E2ADB403D6431CEDDA95
+                162F21FF629AC062DA8CDEEA58A5C986F6C035823B1128245E00308079D2895F
+                F10A5C5815BB8A152F802D0A8FF32A84AA60962607DA03D700EE442041D85507
+                CC2DB64F22893FD609BC93EEC3AF2B669705F19E86F6C435437BE01AA004FECE
+                8A7801A0CE810BE202BBB9EBF467E572615BBC009482E573CD9AF2A0055C038C
+                2DF810B3758FE502DCF12476977B2BA724F1021121A053EBD4083D85AE21AA0B
+                FF49C05F59ED57CEAD9CB1ADA20708B8C96A5F0544848125742F5E2DD50E8D3D
+                B4806B8CEAC28F09789FD57EE51031B7C32D1D78C81068B5DA57011161627135
+                57C73567A2053C09902BF103C1F8A8D57EA588782CC2EA71012CB4DA578B77F2
+                A09F810B70B1FF1A6F833FF87483BFCDF2732777A24D75663FEB9B89B1051F53
+                841D56AF9F115461C936EEC01CE5C49336C5BBBF9078B91D6EB912DBB9D37A05
+                085F20E4F634B73C30D7DF6AD9B6B311ED81F3E09B1FF425047A04E03325C71C
+                86B1F8F0C09EA2BC1D77E2FA3861970B702B20225C08D2DD88E7EB235762BBB0
+                51F6C48A27E65B30571A78DC002EB13A8E24848D38DE5348BC63B1D31F4BBD80
+                0EDA56DCCD29F3E8E2318C9E3C07B35A8BFDFF3E5BD11E3807175FDE3A3F2D5E
+                00701AE44E4AD9538C27E6155892162F900A8B547184B90BB3F3F533B6A04311
+                B659B5D505B88F32F67027DA0AD8354F02BD76C4CB8CDE62C40B27368E8B1700
+                08DBB91305EB0CFB022177D23C319E3CE05CD4CF1050CF342E0886ACDA7A36A1
+                059C85067F5B8024FF2C2DDE34C5889857E2E6B8C07FA4C59B46000105F4168A
+                6D36B6A04B113659B579B640FD16C253B922A38A8DFCCADA97D14B092C2F245E
+                AEC376009F38E34DC246EE42CE7A4ABEF9419F69C69F228889D36622851E2DE2
+                DCE829F4041AFC6D0124D5CF852377E8A2048E3263C9CB83E167325FE74EBC2F
+                4EB86FA27827F42D2AB65976E11E017CC6FA5F803322A3EC447E8DF7653C4209
+                7CB018F116B18FBC86B6E2B4BA4A6F6C6A9B6B90EA21605E5E3B04168F3C17EE
+                2DDEF2B303ED813368F0B70584523FC9275E003080D926A93D5E7FCBB5E9D778
+                256E2924DEB1BEA9D8E6429E782B3EAB14BE69ED2F1843A127ED89B91301A9B0
+                D38E7815F0FD328A1700367027BE9CFE65EE658BE60952BD85C40B00DA136747
+                7BE031C60A7D3D02E07C0BDD9805960C5F13BE3CCEB8A3907833911251C3C04D
+                B41579D3B77217D601B09BBA754D52E16F1D020D563B2AC20E11C79A328A3793
+                F58D4FB5ED02D4CE898F298560E0C69181F0CF2C8E376DD11E18A7CA8AC09A78
+                0180C0B48C159658112F0018067C71E009EEC49BF30EB015EB14F08F16ED8202
+                2230B1C310B09C9C4729DC5B41F142014BEB29799555F10200010F35FA5B3E56
+                B8E5D9C1592FE0926A02116F74D4B9D6896D586E3BB659225C681FD7D88AFF03
+                605DB1D7CD0CB4105BF14EC5F8D7A2FB12368924BE5841F14684C0F2DF1DD87B
+                1F333E6FB53F0010E8FBDEE6E0998B65672167F514BA617E5B6B92E54376C56B
+                1AA35FFAC3AF7F7D3CFD92EA440F91F5F3B1C5EEE372176E077067BE36B9A2A4
+                8AD96356C04661627D11E2DD4184A5F9AE95D33689B7D3FDF873FA356F53CB6A
+                26B25B30FCAC4F717BD60AD8D3DC76B599940FDB156FAE7A40AA130F13E19D56
+                2F59B4883BB11A84AC5FF842218EF944AC808DC656E4AD713426DE7F21C28DF9
+                DAE5B42D811B683B8E4C7CCF6EA9D531CE6A119F9502F634B5BDCD54F2C1728B
+                378DECC40F05E1C3562F5DB48857E0C310F8E1849777C3C4B282DB5359445CAC
+                7895038F0981B7E66B978D6262A71BFCAD6F17E047AD5E1B38BB2B459C75CFC0
+                739B16BDD7B678191B8AA9C4676CC3472A19DB4CF7E15FC1A7BC3C337A8B112F
+                3016EDA5F0EDF4EF4589B70BE72B079EA8947801E0F040DF63562A366642C4F7
+                799B5A73068A4C67CE2A0FEC59D0728399C0BF55CAF34EA4D2B1CDDC89F73070
+                7BA128A91CB67D070CB3A0786FC1EB9581C704AC2711B0736A295FB1B7421073
+                F7D060BFE528B6A9CC5923E0467FF0A309C9F7D8122FE81BC3037D9FB3336E49
+                2226DC485BD06767DC72504CD6CC3C1435A5CF466922A63543837D7617C5A61C
+                67C514BAD1DFFA59DBE225FEB25DF102E307147658EDE702DC5B18BFAC55FE65
+                5E81A65262A7ED8A17B05E00FDB4B1893778FDC17576FA4E45A6BD07F6FA5BBA
+                E21277DA112F13AD1D39D0774739EC902BF11DC1F8B4D57E0380F433DE4EDBB0
+                BB1C7614433AFCB252071F8AA5244F0CAC1F1A08AF2BD586C9CEB416B0B7A9B5
+                3BAED45A7B9E17B70D1F089735DBA25C898D820B1FADCB4A9552B79628DE5D94
+                40473933756811E767DA0AD8DBD4DA7D944E7CED5CD4CFB0D1BD627B8B7225D6
+                0B3E15D06F09C6C24AD624E276B8934EFCC601345AED5B4CECB45DB215402F16
+                66DC393218FE42B96D9A2C4CCB67606F536B379F905FB12C5E7A4DA2C28101C6
+                16AC5584AF59EDA7808D48205A0193C6A11D883980CD56FB5552BC00303CB0F7
+                490875B59DBE44F8BCA7B965DAE6AD9E7602F636B576B338F60DCC12E758E967
+                4A8E815FB7A21A513DC6167C11C0FA62DB2B60A370616D3592C8D1567C15C06D
+                C5B657844D95146F9AE1E7F63EAD5207FED97267A66E4F73F0BEF25B557BA6D5
+                14DA6E489E29395667E0D69181FE1F54C2AE5CF04A7C1E8C7FCAD7A698408B4A
+                C02BF04E083C9CAF4D31B1D3E5A6C1DF161074740FF875F5963B337A8707C3B6
+                56B7272BD3C60397225E9710ABAB2D5E00A02DB8138C2FE67ABF56E20500BA0F
+                8F8073279DAF857801E0F0C09E88E2D96DA664EBE312429EA6A0AD05B1C9CAB4
+                F0C0DEE6E0E7B98027CB862939E63268E5D040F84795B0AB58B80B5D00B664BE
+                564BF166C2AB10C2845560056C145B711BD999CE9689928E814E234F3CE505DC
+                D8DCFA65622EFA79328D2939E614A26378B06F5725ECB20A776119809D00A080
+                BB8CADB8BDC6268D9329E2C9726301004FD3550B4C653C79368B784A0BD8EB6F
+                59CF20EB5B32C7D5FF60A6F1D79345BC69B8137FA904AE36B6D84EA153317815
+                424A61E964116F1AEFE5575F1237C5BEB355C48E5A1B50128CA76CDD82668973
+                08EC2DBB3D25A2801652B8B670CB1AA0B090B8BC5511CB8162C36B7B262F78CA
+                278D9FD28B584383FD8FD88E990536799A5BECA56DAD007205BE26085F2242A8
+                98722CD5642CA7F3B78810E2AEC953C8BBB1B9E57D8904EFACD6E9B2C9C89416
+                30505AE03B98EEF1F88345EF795602064876E11E21301E2D349944CC5D580B9C
+                56C0FBFAC9609BB7A9F5E38924EEB3235E227C7D3A881798E2CFC0999412330B
+                E22F0F1FE8FF4A994D2A08DF0A9732B139D7714366F48A6D366F4E654076E1AB
+                02D9B7B994C233C67DB8B2DA360180C71F6C37256FB025DE69161F3DE53D709A
+                123DF11D5E7FEBDF95D9A4FC43AE83C8275EA0B69E983BF14FB9C40B0042E0AD
+                C915F855356D02008F3FB8CABE78F98EE9245E601A79E03453E1F40AB7C3AD5C
+                D850EC41FF6A7A62064875E17E017414D35E0111318A6BE9FB385EB875699472
+                BA8C80D54303E16F176E39B59876020600AFBFE55A063D69A76FA54FAF703BDC
+                AA0E9B04E1E356FA5563CA5A684A9F8B6A14FC2EE96828F893C303FDDBCB6F55
+                ED993653E84C8606FA9FB29F200D9F6F6C6EAD484A166E879B9DB8CFAA780120
+                217089D542DE96790DF5B0B15524808072A2A750BD27BBA4C3642D8BF7F8CB49
+                001DD355BCC034F5C0693C0B165D0525F6C2CEDFA9B07DF8F9F027CB654B29D5
+                0C12C0A1BA2496D03FE3C572D9938BB102DD3DD54A62578831F17E13169D8D04
+                8E1A40F774CF193DAD050C8C9D5E91EA973030D37A6F7E7478A0DF7292F633AE
+                5282782570D01058429B2B7B163813BE152E69E21183719DD5BE52226A482C2C
+                87884B39A0E23468CD74172F304DA7D0991C1ED8135186B8666C3A65117A4743
+                7330EF91BA424C35F10200DD8DB861E04649085BED6B18F04903FB4B9D4E6BF1
+                16C7B4F7C0696A717AA51C45C02A255E6E87BB182F5942BDA72363B9AD0F58ED
+                5BD2D150073A870EF4FFD86ADFA9CAB4F7C0690E0FEC89B81CB8A65AE748AB21
+                5EB90277246FC141ABDE2E6D5B317BCC621B16DBACBC38274E78CAEAC29BD71F
+                5C67DBF30AD171368917388B3C709A6A9C5E2959BCC08DB4152FE71D23A3F0B7
+                95E7CE89B615BBC75C52E5454288B6E0D9426DA7CBD1D06A72D678E03443BFF9
+                D58B3385119049FCDE72E7223CF1D856D1F76C8BD7C09242E2952BF00DE0D491
+                43C3802FEEC46FB90B9717B46DC28DA5D868AF314FFC50117FC669B800779CD1
+                5BC8137BFD2DEBB578AD73D679E034F316B45C1857E23103DC6CB9730E4FCCED
+                704B071E3404DE66F592C56CC1F007E054AFC7965C8116F96A2A159A15488527
+                1CF715AE02213BF1809D7DEC3CB651833FF8CF02D6CBCF9CEDE205CE62010340
+                C3152D8D94C423049A6FBD373F313CD03FFE851FDB3F7D5C000BAD5EA928F1AE
+                83502FE3FE425152D9A6ACC54EE925F02BC7562C2A64AF5C891F08C6470BB5CB
+                6ADB04117BFC2DF7036479BF5D8B37C5592D6000F005426E353ADAC306590E5C
+                904C4FBF34D87735AFC2054AE1710158F6E60AD82F4C2CC92B5E8BB1D3994219
+                9FD2237782BA09F6448CAD856F42A5565E9CF7AB403461CED8A03D6F699CF502
+                064A1331083B5F6C0B5FE620F8AD7695C01EC3C47B0B89174E6C04F0092BD78E
+                03311770B394B8C330AC65F92836A2CAAE8813C0A16BF60676FEDE9C61B9A66F
+                6A9F17EDC303FD0F5AED3B1D39EB16B1B2118DF4C6447DFD6292D652AC28206A
+                48DCE6003EBAFB05288BC3EE2E46BCAA0E9B6051BC9990014B09EE81E2639BED
+                545E8C03B13AC6BA2370AF07D06FA5AF2939E6006ED6E23D85F6C01958F1C404
+                7E41287A77F4F970144815053B01EC9E4938B750DF622AF88D3D536F16C0872C
+                FD11004C853F398125741F7E5D8DD8E6628BB68D4D9FD7D0B671D193A729F838
+                8AD89E3225C70C432C7969A06F7F51C69F2568014FA0181193E488205A9E166F
+                1AEE44204EE87121B7E762E06764E22385C45BCEF0CB9244ACF01B91C4DB0A8A
+                B80B770BE0B3B9DE1F9BD277D0569CF1DCEA690AF6E413B102A20EA9961C7A61
+                EF414BC69F05E829F4040A4DA773891700681B222E85EBE3C8FE6557C00F2A2A
+                5E8968B6D869DA819870E03A29AD4D590140085C2E0D3C5D703ABD15B72AC2A6
+                6CEF8D79DE4F66132F000C0F86172357B497C49010E21D5ABCD9D11E3807175E
+                71C5ACBAC48C8789445BFA35921C491AC9A52F0DEC1BCAD7973BF1E638A13FD3
+                132B60BB30715BA5C49B045E7008BCBB50F8A5DD882A2911351416D1761CC9DB
+                AE135F11842FA57FCFE7792732D1132B205AA7B038DBCD5293420B383FE3CF68
+                243922EAEB174723BD45C552F3A77151D2C4D30E810645F8AE88E3FF544ABC8A
+                F1AC30B0ACD8830F2585452A5C4FF7E1D7F9DA8D65B25C6745BC69BCFEE0E30C
+                2C9EB8C6A0C98E167011789A5B361875F1F5D148C4D24108FE343C48E06348E0
+                DE8A89D7E6A925DB224EE255571D16178A6D1E13F1B356C49BC6E30F7ED550D8
+                A6C55B182DE01A331668F100013759ED3B76F061296D45DE297DCEFEA578E21C
+                219B9AEAA2055C43C63CEF4E3B222A57FA1AD5895F10E106ABFDB48827077A15
+                BA468C79DE1FD652BC0020B6E15D4AE18756FBB900779CD053F1447B9ABC680F
+                5C03B80373541D1E17C002AB7D8B899DB643A9B1CDDA13D706ED816B003BB0D5
+                A6782395102F602F2C124879E2046157A552CA6AF2A3055C0328810E05CB1E6B
+                5FA593A7DB11711218A963DC5049BB34B9D102AE01E391510A7DC5B467462F4C
+                BCA31A2231B6A04301FF5C4C5B291175085C47DBF0DB4ADBA5C98E7E06AE21FC
+                01187236C286C05539DB28FC9C92F870B53D9CECC23D02C8593F594A448D3A2C
+                AE76CA5BCDE9680F5C43E8DF218D46B44A42D63A4ECC78A416E20500632B3E9B
+                2BB659319ED5E29D1C680F3C49981854514CEC7435905DF89600C68B61573A5F
+                B5C61ADA034F1232F32F2BC28EC9205E0030B6E23605FC239011F9A5C5ABD164
+                67E02333EF988C5B32FB3E7CCE06EEC2F9B5B643A399B4789B5ABB2FF60763DE
+                A696BFAEB52D9934F8DB02175ED6F2AAD71F5C576B5B34A763D4DA004D0A6F53
+                6B77F2287FDD988199205A3EFBFC86178EBD72F8B95ADB35A1A65468F6050DEE
+                63470EFFA2D676695268014F02BC4DADDDACF8AB6226668CBF48F4FED9731A0F
+                1D3B3252B310C5EC05E12878EE059EF38E1D19F979ADECD29C42AF42D798222A
+                F175D4A25466A33FD89290FCF3DC35A4D44F8607F65A3E02A9292F5AC035C442
+                19CDAA8AB8717EEBF50956BB0A158023A0676820BCA45A7669CE446F23D5084F
+                73708D85329ADB1BFDC15B2B6AD0188D0B82A162C40B000C2CB65A7655535EF4
+                33700DF0F8835F04F0752B7D08788FFB7CCFD1A3AF8C842B64163C0B5A6E4824
+                F0634BA55709BED9E737868EBD32F240A5ECD2E4467BE01AC0027B6CF523DEE0
+                6D6AB55C8EA4183CCDAD1F3613F8375B759385B58A169AF2A13D700D38F6C791
+                E8B91736EE261B07E84178F7ECF31BE5B157469E28973D1E7FB0DD947CB71DF1
+                12F88EE181FE2F94CB168D35B4806B4489225EE29ED348478F8CF4966A87A729
+                F82953F15D76C4CB446B8707C2968B726BCA8716700D2949C440E8DC398D3876
+                6464B7DDF1BD4D2DAB4D85AFD8122FD3ED23037D5FB33BB6A63C6801D798637F
+                1C89BA2F687C1480E522D70484DC1734CE3C7A64E451AB7DBD4DADDD71C5EB6C
+                3DF3021D2383E1EFDAE8A729337A1F789230D7DFBA50819FB1D39789368D1CE8
+                2B7A71CBDBD4DACD27E457304B582E3D8A1A059668B2A3053C8968F4B72E22B0
+                E5026400C0A0AD23037D2B0BB51B0B1EF9162C7EF60C1C2360B516EFE4420B78
+                92D1E06F0B08A97E090333ADF665A6874706FBDE95EB7D0B915FA7614A8E390D
+                5AA3C53BF9D0029E84643F4450248CDEE1C1F0E2892F97225E9710AB8706FBBE
+                67D9164DC5D1029EA434F8DB020CD56B00B32D779E20E252C45BE7C08A9103FD
+                FF61D9064D55D091589394C3037B22068B6B4DC9D6D3EA1042E918E5C6A6E0ED
+                B6A7CD427468F14E6EB4079EE4CCBD6CD1BC93A067EC4CA715101580CF6ABFB4
+                788707FB2C9706D554172DE029406373EBA5C4720F20E6547A2C2DDEA9859E42
+                4F01460EF4FDCE21E872093A50C971B478A71EDA034F217C81805B9A339E848D
+                C26885D0E29D9A680F3C858846223126BA9E64798FEF69F14E5DB480A7182307
+                FAFE2CEAEB17974BC4A9200DB46BF14E4DF4147A8AE20B84DC6A74B4870D0AD8
+                BD862939E632F0574303FD4F95D3364DF5D0029EC29422625372CC4578C7D0F3
+                FDFB2A619BA63A68014F716C8AF81556B464E4F9BEDF54CC304D55D0CFC0539C
+                68A43766E999586288895AB578A707DA034F132EBCE28A59AE64FD230C6ACDD5
+                4601D13A85C5D1E7C3D12A9AA6A9205AC0D30BE1F12F7A1C10D74F7C83244704
+                D1722DDEE98516F034C4D314EC4146B170283C9B24B1F4E5C13D876A6795A612
+                E867E069C8F0607831C68A8593E488012CD3E2D568A6189EE6960D0D57B434D6
+                DA0E8D46A3D168341A8D46A3D168341A8D46A3D1683453115D1B49A39944F802
+                21B7FB22F78CD8EF7F7FB298F63A9043A39904F80221B7D71FFC9B847972BF32
+                EBAF2CB69FA3924669349AFCF8022177D28C7F4C9E38B11A0E71A9558F3AED05
+                CCED706366DD9B904C3480E18681286D4E85194E05B81D6E9C33CB43F71CD7C7
+                FFA611BE40C8ADCCF8956A74F41B6450000E7B93E1692B606E875B39B1360E6A
+                772513A9A4E8044001DC0540880700B58E36235A4B3B27C2EBFCE7E0F7035741
+                21A480A571C0E7328FBB7915E64D365B35D6B9F4D29673132EBE4A8D8E7E930D
+                0AC028ED3CD1B41430AF824F26D063003E17387B23A53E110796F22A2C9F0C1E
+                995721A41496265FFAED071DC0C5406A81C235F6BE62AC05D05133033525D3B8
+                20183213BC815904CAB57C3C2D8F13AA4EDA45C44B8B691B07622E8185B5F06E
+                DC0E379CE856444B0573DE94380324A49FD4A5DA0B4F3D1A17044322C11B8A4D
+                7B44A0770C0DF43D564CDB69E781B90BCB0014255E0070016E96D8006079E5AC
+                3A9DB4B78D03ED2EC02D38C72C21033F2B4319AE2F00F1555530515306C685AB
+                10E012A7CAB99876DB488AC495C8356DCE011196F12AEB45C0ACC2AB10925DD8
+                0F851E0174BB004B05CB12C9F887F80BB3CFAB947D9AF2E1F1B7DE450A25A5FD
+                2D8669276052CA56D991B167CC8A3041B8B63F5017C88DA3AFAD28A76D9ACA40
+                24AD1767B7C1B413B052F60492E0F27B615E85905C49250B37E38A884BFE62E9
+                D7D14C17A69D80C980F582D8483D0B436159396C38CDE316589CB28A0BECE62E
+                7497F39A9AA9CBB41330C8FE62411C54D2349A3F37E722D9850D27243D581E8F
+                9B9D382A37DDD74C2DCAB60AED0B84DC09D3F491509708495E166A2E00906483
+                0D92608C32284ECC47588817417C72E4B9706FB9C63F05F502F6BC9E0BECE64E
+                B4D336ECB0D26F3C68E4E8917617C83D93AC2DA259C505D8B25333FD2849C08D
+                0B8221A11082E4A5A3A3A33EA7416E288089014E79421634BE284C0040046206
+                18F0F8834052FD0E821E2387F8AFA1E7FAFEABC4BF07A26ED61698AFD99E624A
+                456B01DE516CFBD49690B85B402D48055D5456BC69E2840D807501A76FB482D9
+                07623708E731D305446A0600282625809304240080812811FF8F227AC5914474
+                B2E595BED87FA557A8BA4B88F82282B88889E78078260010C8046354A5BE8D87
+                58203A19FF8652B03CDF4C055F9F5C2D242FABC81239F14643D2A652FE93D5A7
+                EA1E23995862DB86FA596FA14DC77F9DAF09B7C3AD5C582718AB6D8F532A8C8E
+                7C5ED8EFF73B8F8973DBA0703D314209926FAE837171A9C32A202AC011109E31
+                247DBF9A82483B0D86FC2B538A4B9C06D95CEDE55D8AE800111E2D7526E8F107
+                7F34F135055C2D606F5194153D4E82FF94BB01FD305D0ED692803DF35B3FAC04
+                FFA35DC32C41BC71F840FF1A3B5DB9130110EDB7EB0D59387E2C36273F90F3FD
+                CFCCF8EB44D2BCAB8ED585B6062891382856078E42187DC666F9E989EFA76FB2
+                04BC1F80AD6D352B30E84125F9AE975E08FFB212D7F70542EE44FCC44D86A235
+                95D9574D1C0639FEDDCEF7CD1708B9A579F2D5F2DB941B625A3334D8B7112852
+                C0292347B703549655DA6291A00304FAD8E1813D968B59AB4EDA49C436ED2540
+                F0198707B81D6E76D13F1373D5A2B6E240CC49D4CF54F7AC80F93388BA185E77
+                CE41BAF3D5A3D9DA372E088658617B556EB267B2797820FCA9725EB071413044
+                129B40B8A29CD7CD45A6388A61D20BB8A179D15BC062578DBE10000016586C75
+                9AC36BDED080E37F1AB13BA622B1C3D8A2C60F0FF02A84E2103F722935C7EE35
+                8B1A17884088278454FB0144681B8ABE79799B837732E373A8618C3B498E88FA
+                FAC5D148AFADEDBC34BE40C82D13A36B25538701CC2E977DC5236CBB6F000016
+                E749444154C14F18CEFAA5C5FC0DB51670DE6DA4067F5B40B078AC96E2050052
+                E869686E596CA9CF863F1D56C2F14F76C74CB05A06A4BCAEECC20628F4945FBC
+                84381063C62E08E31638EA161A5BB1D0D8AC56D336ECB024DEA6E05666DC8E1A
+                1F506183026A74B4A7946B8CCFF898BAAB2F5E00A0B725CD93CF78DF74F525D5
+                1FDB1A393FECD481E3D130832EABA641393989E3AA5E5D73F8C0DE67AD744BDE
+                42070D837D768654646C57E05607ABF976FA67871007C7EA84B14B48B9090944
+                6987BDE09334DEA6D66E26DE502E0BCB0101EB8706C2EBACF61BCB50B18350DC
+                69B28AA23062CC3879793412C9F9F94C5A0F2CCDD1ED9346BC003003B3C06297
+                D56E86D368B73BA460D9512EF1C6811813ED82B3FE6A978979C666D941DB1029
+                55BCBE40C81D576AD2057630B0D6373FE8B3D227ED792785780140A051C667EC
+                ACB519F9C82A606F536B77290B56A6E41814B6B3C06205B1102C2E07D37202D6
+                2BD83FCF2A009FB7A9C5D2B60DDD9BDCAD80A21725CA0DA7AA04AE71999827B6
+                F072BAE7C4D3A58A3613659EECB6BF95525992029656756562746DB5174A0B42
+                08A5F4303939630AED0B84DCA3A3A307ED7F29E4338632DE976F6FD0E30FDE0D
+                E0B376AE6E4A8E1975EA8A979EFBD570B17D78DDA5E7CAE1FF7ED6EE54DA2AA9
+                9563472FA9E47A2BCFB17668F0070F96B246614A8E390DF4128BDDCAE0082B11
+                0300C1EC23C0278957DBBDBE2939F68717FA8B3AFED8D8D4722311FDD4CE3895
+                8660BE2694F38A6CDFE95A4FA1CF88C42AE58E9E5A819CF5F642AB77C303E15B
+                1BE7B75E4482DF6F750CA7416E928EF7C18257A575BF3BC6B7D62D433C19A964
+                A4541C88B92036B9CE71DF4FDFFA73D13718BB5CEC6F5D2850C24D8978637D7D
+                FDFA1C9F57FAC6B3D1E30FFE0B808F58BDBCD320B76F7ED05744A00711D1DF5B
+                BD7E36186A3F81F683708C18C724C82B141642E02DF6AFE97C5D424CCE9446A7
+                0938156677F213764E3898926375243E3E54E4F681D33457C467D45D65E7EE3E
+                F6CC67695A4C77279EE52EAC0150F6C59E9470B1DE656207ED5031E0CFE51E22
+                2B0EF052DBB7230B81328673C667A479D2B2800140112D4381CFAAD11FFC0880
+                A09DEB8FC3E85524D61C1E08679DF1789ADBAE564A7D4B10AEB575F9183EEA9B
+                1F5C3FD9C2304F13B08CC74382EC4D97EA1CE28191037D45A73E7DF1C57D473D
+                CD2DBBC064F9F9C2C29DFD34682B3672172D03F87AAB6366230E8AB940FFE032
+                D5FDE57CAE2D1609B14B404509F04960AE60F840B818C09B906787C1941CABAF
+                AF5F5FEC38D1486FCC7B594BC44E141493BA1E05044C8C15256D7E116F1C1EC8
+                7F331A3EB0E75700AE6B9CDFFA1809B61C666BB851A7F8CC9BD11B8CD78E1FE1
+                BA774E6CCFC49F07E81D56C719EBFD3962CAF9E825987F97FEF9F42934AB77DB
+                3D8E2794B2FCFC62D4D5AF97E6495B0B04C5DCD9B362F2B2B8930EBAC0B6177E
+                E240AC8EB0CBE572AFA56FBF3A64F73AA53216A196F383F6CD0FFA245100C46E
+                027C00CF94440197100F590DB4600351D83B22794EBE371BFC6D0140856C5C37
+                85C5905BC70CD7FB12E6C9FD16667E0CA857148B1748E0DC896FEEDBB72F01E0
+                D189AF7B9B177D88D99E960862FFD0A08DA4764AD0BBEC4E9FFFF0C6FA1E0C5A
+                EB178DF4C62EBCAC2566E799BB983B7B36680762BC8A9743C156B0411C88B918
+                8B692B224055D72E2C33364389DAEDEF0B84DCC9E4C90049DC6A4A0E396DA442
+                2589F3F3BE0F759D5DFBACCE2480D477AEB1B9753B98C7FB49E0A800FE4CE0DF
+                92E2DFB210511678869588D5399DD152A3CA2AC9B880E7F843E7089CF4D9B988
+                0B88A2B73769A76F9DC107015A68B59F2911B2331E00E0A2D053EAA5DE889D43
+                F72EC08DD463464557976B452A84F1E4DB98E9BDA3A3A31F741AE40601CE0A65
+                5564E0AD76AFEC3268931D7139EA5CDF56663CA104F7B11231E72417693EC605
+                EC8479A9DD8BB04157789A82B63C9A02CEB3F3013A0D72FB0221B79DFF78F5F2
+                1377959231230E6CE74E442BBD455405A8C1DFF616C1EC53C4D719929724CD93
+                9710702E812B26DAD30C00FD85ED9D01C53FB1D36DEC3BF3357B834E2EC6052C
+                48794BD86111207B1EB1949C3E09D3F4C1A227E42E748355491BF32EC02D1576
+                F2BA4BDF42EB7E77AC946B55139FFFEA8B243B82441C50A02509A92E17506E50
+                EA736083AA1E48CD608F9D31C7F698F795DDA029C6A96760C6EB6B68872D4828
+                4BCFCEDC89401C58EB2ADCB42086011F1FFEDD83002C1DB2A8269EE6B6AB49F1
+                3520BE49295C28013F88C100AAE5610B613748C455C2B3FD742263118B44B5D2
+                C1940BE233570573C1ED702B6087D564EA79C72784D4A7E83FC4BDFCBE725DB3
+                542EF6B72E74809742F2526615482F84D2244C5FE8BDFCDAF358DA5A3A010C7A
+                A9BCD64C4D3204CCAA7666D88354F1ABD75C87ED82EC47E3E4B441F2CDB20B1B
+                8CADD6E27ECB8DD77F753314AD4C823FCEC0EC52ABDE558338A93AA7CDBE12F8
+                63598D99A29CBA2F334DBD553851DC461B77A19BA870CE6745F6B23C0AA09B57
+                D595351385153C4DC10FC5A5788A85B8B5DCE7674DC931307A4DC965FF7ED40B
+                A769B72F1195A9BEDFD4E694800D75A28676540C5E055FA13CCA5B88188C0E63
+                0B3A20B0D8D6997895F86E2D12AE7B9B5A56238EFBCB7922C9941C23A007C0A7
+                5CCEBA4B8607C38B9D46ED4BB06642AC5E576B1B2603E35368C351BF579A276D
+                5E861F25A275E531A97884C4E1426D5862838BF23FF7AE54FCC9747647DA8C5E
+                5EC58B6D067A6CE09582698BDA64A3AF657CF383BE51C5EB9C3330ABE48B317A
+                89B05B42ECAAAFAFCEBE6834D21BF3F883A93535AB289A577E8BA61EE3028E46
+                7A639E4B17FE194E97E5D56853E2AA3F5428236129F0679C1F44C2CC3F75AEAB
+                5F43DF19DD91F9524AC4B02762561BB90B445B2B7F063949B4C529EC2FCA9992
+                632E833649885D8707AD270E2C07A6E4A376660F26F3DC52C6F5FBFDCE818101
+                DB53F8C9C2E9B1D02ED7C360FC2FAB17B17BB8A092703BDCF2A479A791E74949
+                09C706E33BA35985569288411BE4A70C8F716FF27F5BEF5B1C0DFEB60041DD60
+                FB02F98F129ED91C34BB127B140E41CF01D64F08390D727BFC8BAE1B1ED8FBA4
+                9D715FC3EBFECDE30F2ECBC8717D8C980E3223C1846720303A1592C04F38CC80
+                5F00D6050C008A782980AA4C1D8BC2896E23CF1EA302361A9B93B7E5BB046D46
+                2F7762619CD0636DFB892164F236D589B78A6D95D9273698433663E5A108F71E
+                B698035902F32AB11325043F0D265B47FC904A0A6159C0BEF9419F3CAEDE8159
+                34B60F4D3EF0D8262A8DCDE7152045AA7A8802A2821105718C415B4706C23F2B
+                348684485463E7EEB4310CE70CCB39A7D224497CDE6A1F5F20E4F636073FD1B8
+                2018BAF8B26B2EBBE4922BCBB282CAB7BFBE318E3C151384B15B98282A089EB6
+                21E232314F91B03CC5244248AE14FB2B513C7CEC30873DA4B234BD6FF0B7052A
+                96995489DDF63B8B0F36FA5B1759ED9514B411B344DE5352A78D02F8529186B4
+                8C988A8A0312E0B855BBC6216E2CB6E9691E381AE98D35F8833B04D06E754C03
+                FC46EFFC45DF1E7A7EEFDF14D33E33593C3160181209A36EFC8E4750AF12E890
+                02C50CE050667D1B4E8A78DD0CE760AEE99F3A766C950BE4CE1698A2209E1327
+                E5322BE777536DD542B912DB055BFBBF11AC0271C67EFEACEB7FD13DF15F58E9
+                9B17450D76E3500F3FBFF7B756DA1BAC3E6DD7DB17BCB6CBD56B7FF1144848F5
+                8B067FDBE26293FF7B9B5ABBD966D2BCD4E9A719BD76FA5A81196F28B6ED195F
+                0152F42DDB030B71ABD71F5C57A8DDC50BAEF624CD933FCE95C04C003E825808
+                D03201B433B096807500B693428F10EAA964F264D6C308BC0ABE844A7E269B78
+                E3404C08E3E3760FDF1B5BD00112969F6B5D801B66FCE7DC857576C6CD8A40BD
+                DDAE9ECBAE29BA3E92C71F6C6742A7DDB10A118DF4C6948D226D699C06B99352
+                F678FCC1F67CED7C8190BBB1B9756329E977AD9C7E22A6AC95338AC194FCF717
+                2FB8DA33F1F5C6052D57789A825F3A6D9C6C17F0F85B7696921D902447D8A04D
+                B23EF1A397F6ED3B01649C2D655E6A26D15ED2BE659E43DC2991D0DA1C61A16B
+                CAB13ACC9D0848859D86617D5AA9808810583EB16C8B55BC97B5ECB75D2788F1
+                F7C383E17F28384653CBEAB8C2BA523E2B921C197AA13FEF7151EFE5575FC2D2
+                F86FBB639C829F20889FA78F0902A9E47C2C104A24D5274AF93B4CC9B17AA285
+                C52E6A8DDD50B6DB1D2F05EF82A2574198379669E5CD1313056615702AA9FBB1
+                2186B3E4CD721943C270E3A829D9518E60837CA53BB81DEEB81307B32D3829C3
+                B8DFB857AE2875FC4CEC4CA9C7118E75B43969E9307A269EA6608FDD13606374
+                0C0F8477647BA3714130448CBF01A3E41A50C50818001AFCC1ED761EDDAA06D3
+                578607FBBE5C6C734F53EB32105724A7B4E19C715EFAFB9FB53E7034D21BF334
+                073F06C683250FE6461D80F3CB71F2C5941C73184647CEC4794E7467136F1C14
+                738DCABF2DD98009185BD0C1B7CE7A381E3FFE5DCB872454729DECC232E19C75
+                17DD73FC8756C766A230814356FB65B0DDE30FAE02F871867849301C2CD45C4A
+                22C4CAFE5969BBD43967AC499A2716134449FBBB954001D13A97CBD2A365A9CF
+                F6F9C83C469B731964F840F83F4B79362937A6E49853888E7C8B150A94F55490
+                CB109FAB54D239BAFBF8BFBACEBBC4978AA3B67693124000E6F17F519DD86975
+                A59AA4B8DBD260D96901E8EF087C37136F005377B9CB77327351ABBDD1486F0C
+                42B49773EC72604A8E0970B7D5C8B4B167FB68256C7270B221FD73DE75CCC303
+                E10E009B2B618415D2E24D1735CE067FCA7593C8520B970DFA39DD2BEFABA47D
+                74E78B478D2DE800F34229AD7F684458068583AA133BF9D3AE7717D367F8855F
+                BE04F013968DAD322651DE9C58998C3C17EE85E07755D21EABB80CF185E1817E
+                5B3351416C7B5B361F0CE34DE363146A9CAAF74ADFA88421C5508C780140B10C
+                9DB9704520E63B2B67DD84D1B621E2B81FF3007B470B89B00CC9F8CF6417EDE7
+                55759FE56FB5E65D694EB2F1715B86DAB14D72C48E47711AE43EFFB26B8A5E4B
+                197EAEFF61C06E5DE73243FCE5A181BE2D76BB1B922A13D844A732AA16B59338
+                3CD0F73941EAED959A12E484D13B53188142E20500A8E419114FCCBC8B3657FF
+                140D6DC5465CFC0197328CFBEDF417E08052C95BF0DBBE0BF3B57B7970CF2166
+                BAD99E951660F48AFAFAC54464CB13D51B094BD3F2E181FE0759D42ED3C9D8D1
+                C98EE103FD5F29E53AD1E7C35130FE5F99CC1A87C1E3E7DA8B0E05387460EFE3
+                8707C2F388A9F207D719BD6071FDF06078F1C1C13D878AE92204962B1207325F
+                2387A36645CD68DDBF9BC6BD72055CAE4BAD9E336646AF307971315B4D23837D
+                3B99E976BB76E6C3941C23A635AE042F8D467A63C46CEBC08382F8A4D53E23CF
+                857B0DE78CF3AABE0EC3E8750AE3BA5C2BF456315C336E2169EFFF2D174CA22E
+                FDB3EDA5616F53CB6A102DE572E4843A89E3706280041E9210BB8A8DAA9908B7
+                C3AD9CE811408005FD4C6CE61B4BB6AD4CF02AF814636DA16D2736E82734CA96
+                834D3CFE45D72988EF952DE471BC54C9A9CFC26E212F2B45CEB2E1F12FBA0E2C
+                EE2871DBAC00F21962F1BD393393DF1D4BD65E367C81905B8D8EF6946D815062
+                68F885F05CA04CD5DC3D0B5A6E80A28B4F2FF1A18824CD4E1AA2CE4052911412
+                4865F8574471017E99943824897ACB993C9BDBE196338C470C3236D1BDE60FCA
+                71CD72C23FFA808147FFFDD678527CD9E550A77DA915B051CC74AFA78D31DBFF
+                17DEA6D66EBB15054DC93127E1DF943036E7BA897AFDC1755C204142369869C5
+                C8609FAD478A340DFEB68001B58C8177A1D45A4A385599116C6C305C277E9DAF
+                907739F036B5762B92DDA56C95A56D1E1EE85F0E9449C093116E87BB16F58AAC
+                C05D58C6A2EE33A492EF00B82C5162692EBE2C788D21F82D107813140548B15B
+                8E05D208E07F4872920D444188A66FA4748C5F1819E91B2D970D95662C58C29D
+                E93814E020C6EB59602600082041928F2BC12788E88F997F6FADAA2E789B5ADE
+                098866267539982E0178A604BF814818CC4A3A14BD068C95B32144C138CC829E
+                4E558A3811ADF48D46639142ABCD1A8D46A3D168341A8D46A3D168341A8D46A3
+                D168341A8D46A3D168CE0EA66D2496E6EC221D950500B90E22A4D2E3AA000028
+                8848AE70D17482BC749BB94D57BE5151DDBB8054EAE568A437D6B82018120A21
+                665C0FE218085143D2A6CC9C590DF317BDC110E2D6741B058A194C3D43837DDF
+                CBF577F80221B74C8E2E02E33D501460A2A344EA28311D140A3B26E6E4D202D6
+                4C0B3CCD2D1BC0D40D0086C2BC6CC9E71A9B82FF4484CF038002768C25AC388D
+                3191EF0700302D1F1EECDBE5BBBC75BE943C987A89DE43CCEF452AA97C363A86
+                07C23B3CFEE02A53F2D7B2E68163F40E0F86CF3804D4E06F0B006A67DE38F609
+                091D2761D9678DC63A4225BF9EFE5951F68CAA4CF850FAE7A4CC9E3480A09602
+                A9648CAA4E3D7DC6FBCCEB007CD6941C63453F06630380CC4A0DDB3DFEE06D90
+                F8666A4CFA2988370219D93908A1896970DFD8D4363729658F007CA6E418146F
+                21A63504AC26603DD2D92A98BA3DFED6BBD2FDB226B5D368A61A8706F7BDDCE0
+                0F4605E053A96387A71D0C19F3ACBEF4EFB9EA7911230402849B1E1AF9757824
+                CB502D2439E272D62D19FACD53E3472B2764D5FCA632E84507C4FB460E9C9AA6
+                372E088668BCD6162F45C6596707D45F63CC5B67CB40E30B843626CC93FB5302
+                572B007C0ED01E58338D48E7A05231BED117089C3675353895C13333AB4C52D0
+                5F66B6B9F08AB60B4E9D39E6FDD9C63025C704D1F24CF102A9AC9A99BF93E05B
+                263E638F3C17EE4D8F6FCA09679B89AF4C5F3F5B069A68A43766306F04F09C83
+                E889C6E6D64B012D60CD7462ACCE92E1465DD29CF1DECCB7D2B5A404F12E5618
+                000002BF2DB38D3321DF9FFED9A1F040B621EA0CDA97EDF93A1AE98D8DA5E281
+                4AE20F23CF857BB3F5178C6780D40CE0B43728256CA7416E6F536BD642F14383
+                FD9B8607C2971F7E3EBC74E440DFEF002D60CD34C2708DF6E2F8CB49002085B7
+                9FF6A6A42B01004AEC26831F060053F23B4F6B4318FB5D3E93AB020311FF26D7
+                F875061F050072A89772B56141C7B3BEAEF0C8F8CFC41B1A9A824F36F883DF6C
+                5C100CE5BA16A005AC9946442391989AF5C61F0080C93C5E55A2D11F6C81010F
+                0018CC91B4A74E3F0703A9ED9BF4B49660FC24D7180AD9059809B1B05C176964
+                B0FFA1D462570A41B85600B791428FC71F648FBF6567B6FA4F5AC09A698500CE
+                102711DF00000CB53FFA7C386AB85CBDE9F6E9156B198F87D2D35AA17227D233
+                18C94AD93E7CA07F8D60F5974CF4FD33DFA56548AD7073A690B58035D38ACC1A
+                D7697132440B0010D16E20F5BCCA637BBDE3759645EA5F921C29B68059253834
+                B8F7A72307FA3E3E3C1026302D67C69D59B25A6EF72E68FD4B400B5833CD8846
+                7A63E9452A2675BD2F1072539253411319C5C4D3624E4F9B158FED1D1BA79E45
+                6BCDF060DFAE91C1F017865EE85F28A4BA24732F9995BA05D002D64C4388F83B
+                404A9C1C3F710D0CCC3425C732A7CE99CFC1DEE696F7A7A39F94A0876A61B2D7
+                1F5CE7690AF63436B5DE92ADC1A117F61E1C1EE85F9E5EE92699B2570B5833ED
+                305CF53F0452E25442DC92FA19BD991928E54CF3E113507100904CE9C8A63FE5
+                DAFEA9302C814F80104AC8E45DB91AF90221B7F3243B00800DBC0268016BA621
+                A755061CAB714CA06733DBBCB46FDF897A65FC1200D2DE97896A97479CF02F00
+                E07418E7799A823D13DFF60542EE84797203668973008018FF05E8504ACD3445
+                10EF4A1F6E000026F1D3331BF1130096A47F2555FD3A5A69EAEA667C438D8EBE
+                970D0A8CC54A33C0BB18E28FC4FCE6D1D1D1407A959C801E473CB903D01E5833
+                4D912CC68FEC999263C307F6FC6A621B87F3E4A6CC367571F30CCF572DA291DE
+                98A8AF5F7C7A2D285A46E02E10424E83DC63CFBFFF289C336E7EF1C57DA9A091
+                DA98ABD1549EB94DC1B7A67F3E34187EC66E9BCC76C4F873AE6D26CF82B6BF10
+                52CDCE77ADC6E6D6D71B8A7DF9DA5C7845DB05CEA4BA91001F13CF069304F3D3
+                86ABFEE7B5A824A1D168341A8D46A3D168341A8D46A3D168341A8D46A3D16834
+                1A8D46A32982FF0F00B7204224C8A9510000000049454E44AE426082}
+            end
+          end
+          inherited LytMnTop: TLayout
+            inherited RctBarraFerramentas: TRectangle
+              inherited BtnAdd: TSpeedButton
+                Size.Height = 48.000000000000000000
+                Visible = False
+                inherited PthBtnAdd: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              inherited BtnEdit: TSpeedButton
+                Position.X = 45.000000000000000000
+                Size.Height = 48.000000000000000000
+                Visible = False
+                inherited PthBtnEdit: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              inherited BtnDel: TSpeedButton
+                Position.X = 90.000000000000000000
+                Size.Height = 48.000000000000000000
+                Visible = False
+                inherited PthBtnDel: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              inherited BtnCancel: TSpeedButton
+                Position.X = 180.000000000000000000
+                Size.Height = 48.000000000000000000
+                Visible = False
+                inherited PthBtnCancel: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              inherited BtnSave: TSpeedButton
+                Size.Height = 48.000000000000000000
+                Visible = False
+                inherited PthBtnSave: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              inherited BtnArrowLeft: TSpeedButton
+                Size.Height = 48.000000000000000000
+                inherited PthArrowLeft: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              inherited BtnArrowRigth: TSpeedButton
+                Size.Height = 48.000000000000000000
+                inherited PthArrowRight: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              inherited BtnTeclado: TSpeedButton
+                Size.Height = 48.000000000000000000
+                inherited PthBtnTeclado: TPath
+                  Size.Height = 42.000000000000000000
+                end
+              end
+              object LytLabelReposicao: TLayout
+                Align = Client
+                Size.Width = 242.000000000000000000
+                Size.Height = 38.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object CircContagem: TCircle
+                  Fill.Color = xFFE89898
+                  Position.X = 225.000000000000000000
+                  Position.Y = 3.000000000000000000
+                  Size.Width = 32.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  Stroke.Color = xFFED0606
+                  object LblCircContagem: TLabel
+                    Align = Client
+                    AutoSize = True
+                    StyledSettings = [Family, Size, FontColor]
+                    Size.Width = 32.000000000000000000
+                    Size.Height = 32.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    TextSettings.HorzAlign = Center
+                    TextSettings.Trimming = None
+                    Text = '00'
+                    TabOrder = 0
+                  end
+                end
+                object BtnAtualizaListaTransferencia: TSpeedButton
+                  Align = Left
+                  Margins.Left = 3.000000000000000000
+                  Position.X = 3.000000000000000000
+                  Size.Width = 38.000000000000000000
+                  Size.Height = 48.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = '  '
+                  TextSettings.Trimming = None
+                  object PthAtualizaListaTransferencia: TPath
+                    Align = Client
+                    Data.Path = {
+                      0B000000000000000000A04100002041010000000000A0410000604101000000
+                      0000304100006041010000000000684100008C4101000000AE474141295C9F41
+                      01000000B81E85400000404101000000AE4741415C8F82400100000000006841
+                      0000D040010000000000304100002041010000000000A0410000204103000000
+                      0000A04100002041}
+                    Fill.Color = claChocolate
+                    HitTest = False
+                    Margins.Left = 3.000000000000000000
+                    Margins.Top = 3.000000000000000000
+                    Margins.Right = 3.000000000000000000
+                    Margins.Bottom = 3.000000000000000000
+                    Size.Width = 32.000000000000000000
+                    Size.Height = 42.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Kind = None
+                  end
+                end
+                object LytAignTitulo: TLayout
+                  Align = Client
+                  Size.Width = 201.000000000000000000
+                  Size.Height = 38.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object LblProcessoReposicao: TLabel
+                    Align = Bottom
+                    StyledSettings = [Family, Size]
+                    Position.Y = 20.000000000000000000
+                    Size.Width = 201.000000000000000000
+                    Size.Height = 18.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    TextSettings.Trimming = None
+                    Text = 'Transfer'#234'ncia Picking'
+                    TabOrder = 1
+                  end
+                  object LblTitReposicao: TLabel
+                    Align = Top
+                    StyledSettings = [Family, Size]
+                    Size.Width = 201.000000000000000000
+                    Size.Height = 23.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    TextSettings.HorzAlign = Center
+                    TextSettings.Trimming = None
+                    Text = 'Ordem: 0000'
+                    TabOrder = 0
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited ImgLstRecycledChocolate: TImage
+    MultiResBitmap.Height = 24
+    MultiResBitmap.Width = 24
+    Position.X = 242.000000000000000000
+    Position.Y = 52.000000000000000000
+  end
+  inherited ImgLstRecycledGray: TImage
+    MultiResBitmap.Height = 24
+    MultiResBitmap.Width = 24
+    Position.X = 268.000000000000000000
+    Position.Y = 52.000000000000000000
+  end
+  inherited ImgLstFdoYellow: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+    Position.X = 334.000000000000000000
+    Position.Y = 182.000000000000000000
+  end
+  inherited ImgLstFdoGreen: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+    MultiResBitmap.TransparentColor = 32768
+    Position.X = 318.000000000000000000
+    Position.Y = 182.000000000000000000
+  end
+  inherited ImgLstFdoRed: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+    Position.X = 290.000000000000000000
+    Position.Y = 182.000000000000000000
+  end
+  inherited ImgFdoGrid01: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+    Position.X = 246.000000000000000000
+    Position.Y = 178.000000000000000000
+  end
+  inherited ImgFdoGrid02: TImage
+    MultiResBitmap.Height = 20
+    MultiResBitmap.Width = 20
+    MultiResBitmap.TransparentColor = 32768
+    Position.X = 274.000000000000000000
+    Position.Y = 178.000000000000000000
+  end
+  inherited ImgEye: TImage
+    MultiResBitmap.Height = 24
+    MultiResBitmap.Width = 24
+  end
+  inherited ActionList1: TActionList
+    object ActContrMovQtde: TAction
+      Text = 'ActContrMovQtde'
+      OnExecute = ActContrMovQtdeExecute
+    end
+    object ActContrMovQtdeNegada: TAction
+      Text = 'ActContrMovQtdeNegada'
+      OnExecute = ActContrMovQtdeNegadaExecute
+    end
+    object ChgTabTransferencia: TChangeTabAction
+      Category = 'Tab'
+      Tab = TabReposicaoTransferencia
+    end
+  end
+  inherited BindSearch: TBindSourceDB
+    Left = 208
+    Top = 50
+  end
+  inherited QryListaPadrao: TFDMemTable
+    Left = 292
+    Top = 70
+  end
+  inherited BindingsList1: TBindingsList
+    Left = 84
+    Top = 53
+  end
+  object FDMemReposicao: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvPersistent, rvSilentMode]
+    ResourceOptions.Persistent = True
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 160
+    Top = 152
+  end
+  object FdMemReposicaoColeta: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    MasterFields = 'ReposicaoId'
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 186
+    Top = 375
+    object IntegerField13: TIntegerField
+      FieldName = 'ReposicaoId'
+    end
+    object FdMemReposicaoColetaProdutoId: TIntegerField
+      FieldName = 'ProdutoId'
+    end
+    object FdMemReposicaoColetaCodProduto: TIntegerField
+      FieldName = 'CodProduto'
+    end
+    object FdMemReposicaoColetaDescricao: TStringField
+      FieldName = 'Descricao'
+      Size = 100
+    end
+    object FdMemReposicaoColetaEmbalagem: TStringField
+      FieldName = 'Embalagem'
+      Size = 30
+    end
+    object FdMemReposicaoColetaFatorConversao: TIntegerField
+      FieldName = 'FatorConversao'
+    end
+    object FdMemReposicaoColetaPickingId: TIntegerField
+      FieldName = 'PickingId'
+    end
+    object FdMemReposicaoColetaPicking: TStringField
+      FieldName = 'Picking'
+      Size = 14
+    end
+    object FdMemReposicaoColetaMascaraPicking: TStringField
+      FieldName = 'MascaraPicking'
+      Size = 14
+    end
+    object FdMemReposicaoColetaEnderecoId: TIntegerField
+      FieldName = 'EnderecoId'
+    end
+    object FdMemReposicaoColetaEndereco: TStringField
+      DisplayWidth = 14
+      FieldName = 'Endereco'
+      Size = 14
+    end
+    object FdMemReposicaoColetaMascara: TStringField
+      FieldName = 'Mascara'
+      Size = 14
+    end
+    object FdMemReposicaoColetaZonaId: TIntegerField
+      FieldName = 'ZonaId'
+    end
+    object FdMemReposicaoColetaZona: TStringField
+      FieldName = 'Zona'
+      Size = 30
+    end
+    object FdMemReposicaoColetaLoteId: TIntegerField
+      FieldName = 'LoteId'
+    end
+    object FdMemReposicaoColetaDescrLote: TStringField
+      FieldName = 'DescrLote'
+      Size = 30
+    end
+    object FdMemReposicaoColetaVencimento: TDateField
+      FieldName = 'Vencimento'
+    end
+    object FdMemReposicaoColetaDemanda: TIntegerField
+      FieldName = 'Demanda'
+    end
+    object FdMemReposicaoColetaEstoqueTipoId: TIntegerField
+      FieldName = 'EstoqueTipoId'
+    end
+    object FdMemReposicaoColetaReposicao: TIntegerField
+      FieldName = 'Reposicao'
+    end
+    object FdMemReposicaoColetaUsuarioId: TIntegerField
+      FieldName = 'UsuarioId'
+    end
+    object FdMemReposicaoColetaNome: TStringField
+      FieldName = 'Nome'
+      Size = 50
+    end
+    object FdMemReposicaoColetaTerminal: TStringField
+      FieldName = 'Terminal'
+      Size = 50
+    end
+    object FdMemReposicaoColetaDtColeta: TDateField
+      FieldName = 'DtColeta'
+    end
+    object FdMemReposicaoColetaHrColeta: TStringField
+      FieldName = 'HrColeta'
+      Size = 30
+    end
+    object FdMemReposicaoColetaDisponivel: TIntegerField
+      FieldName = 'Disponivel'
+    end
+  end
+  object DsReposicaoColeta: TDataSource
+    AutoEdit = False
+    DataSet = FdMemReposicaoColeta
+    Left = 186
+    Top = 434
+  end
+  object FDMemReposicaoTransferencia: TFDMemTable
+    FieldDefs = <>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvPersistent, rvSilentMode]
+    ResourceOptions.Persistent = True
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 46
+    Top = 154
+  end
+end

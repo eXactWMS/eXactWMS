@@ -1,0 +1,12 @@
+﻿[FrmInventario.QryListaPadrao]
+Visible=False
+
+[FrmBase.QryListaPadrao]
+Visible=False
+
+[FrmExpedicao.QryListaPadrao]
+Visible=False
+
+[FrmSeparacaoColetor.QryListaPadrao]
+Visible=False
+

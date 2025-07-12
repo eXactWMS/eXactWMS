@@ -1,0 +1,25 @@
+version: '3'
+services:
+  exactwmsserver:    
+    image : rhemasyssolucoes/exactwmsservice:07_03_2024_d3e386e
+    environment :
+      RHEMA_DB_HOST : "exactwms.ddns.net"
+      RHEMA_DB_DATABASE : "eXactWMS_DC"
+      RHEMA_DB_USER : "eXactWMS"
+      RHEMA_DB_PASSWORD : "3X4ctWM5"  
+      RHEMA_DB_LOG_HOST : "exactwms.ddns.net"
+      RHEMA_DB_LOG_DATABASE : "eXactWMS_Log"
+      RHEMA_DB_LOG_USER : "eXactWMS"
+      RHEMA_DB_LOG_PASSWORD : "3X4ctWM5"     
+      RHEMA_SERVER_PORT : '8200' 
+    container_name: dockerexactwmsservice
+    networks:
+     - exactwmsservice-net
+    deploy:
+      resources:
+        limits:          
+          memory: 15M       
+    ports:
+     - '8200:8200'
+networks :
+  exactwmsservice-net :

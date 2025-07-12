@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <Instalacao>1</Instalacao>
+    <Company>
+        <Name>FARMACIAS CRUZEIROS</Name>
+    </Company>
+    <Server>
+        <Ip>192.168.0.5</Ip>
+        <Port>8300</Port>
+    </Server>
+    <Collector>
+        <Brand>Honeywell</Brand>
+        <Scanner>1</Scanner>
+        <Teclado>0</Teclado>
+    </Collector>
+    <License>
+         
+    </License>
+</config>

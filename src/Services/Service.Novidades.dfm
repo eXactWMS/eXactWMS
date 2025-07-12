@@ -1,0 +1,2 @@
+inherited ServiceNovidades: TServiceNovidades
+end

@@ -1,0 +1,112 @@
+﻿inherited FrmProduto_SmXhdpiPh: TFrmProduto_SmXhdpiPh
+  ClientHeight = 375
+  ClientWidth = 250
+  DesignerMasterStyle = 0
+  inherited LytBase: TLayout
+    Size.Width = 250.000000000000000000
+    Size.Height = 375.000000000000000000
+    inherited VertScrollBox1: TVertScrollBox
+      Size.Width = 250.000000000000000000
+      Size.Height = 375.000000000000000000
+      Viewport.Width = 250.000000000000000000
+      Viewport.Height = 375.000000000000000000
+      inherited PgcPrincipal: TTabControl
+        Size.Width = 250.000000000000000000
+        Size.Height = 375.000000000000000000
+        inherited TabLista: TTabItem
+          ExplicitSize.cx = 67.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          inherited LstPrincipal: TListView
+            Size.Width = 240.000000000000000000
+            Size.Height = 365.000000000000000000
+          end
+        end
+        inherited TabDetalhes: TTabItem
+          ExplicitSize.cx = 320.000000000000000000
+          ExplicitSize.cy = 49.000000000000000000
+          inherited Código: TLabel [0]
+          end
+          inherited EdtCodigo: TEdit [1]
+          end
+          inherited EdtDescricao: TEdit [2]
+          end
+          inherited Label1: TLabel [3]
+          end
+          inherited Label2: TLabel [4]
+          end
+          inherited EdtEndereco: TEdit [5]
+          end
+          inherited Label3: TLabel [6]
+          end
+          inherited CbTipoControle: TComboBox [7]
+          end
+          inherited Label4: TLabel [8]
+          end
+          inherited EdtFabricante: TEdit [9]
+          end
+          inherited EdtEmbalagem: TEdit [10]
+          end
+          inherited Label5: TLabel [11]
+          end
+          inherited EdtAltura: TEdit [12]
+          end
+          inherited Label6: TLabel [13]
+          end
+          inherited Label7: TLabel [14]
+          end
+          inherited EdtLargura: TEdit [15]
+          end
+          inherited Label8: TLabel [16]
+          end
+          inherited Label9: TLabel [17]
+          end
+          inherited EdtComprimento: TEdit [18]
+          end
+          inherited EdtVolume: TEdit [19]
+          end
+          inherited Switch1: TSwitch [20]
+          end
+          inherited Label11: TLabel [21]
+          end
+          inherited Label10: TLabel [22]
+          end
+          inherited EdtPeso: TEdit [23]
+          end
+          inherited Rectangle1: TRectangle [24]
+            inherited Label14: TLabel [6]
+            end
+            inherited Label15: TLabel [7]
+            end
+            inherited Label16: TLabel [8]
+            end
+            inherited Label17: TLabel [9]
+            end
+          end
+        end
+      end
+    end
+    inherited LytMnTop: TLayout
+      Size.Width = 250.000000000000000000
+      inherited RctMnTop: TRectangle
+        Size.Width = 250.000000000000000000
+        inherited ImgPgcRight: TSpeedButton
+          Position.X = 202.000000000000000000
+        end
+        inherited TbOpCadastro: TToolBar
+          Size.Width = 154.000000000000000000
+          inherited BtnCancel: TSpeedButton
+            Position.Y = 9.000000000000000000
+            Size.Width = 32.000000000000000000
+            Size.Height = 30.000000000000000000
+          end
+          inherited BtnDel: TSpeedButton
+            Position.X = 140.000000000000000000
+          end
+          inherited BtnSave: TSpeedButton
+            Position.X = 89.000000000000000000
+          end
+        end
+      end
+    end
+  end
+end

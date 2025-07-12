@@ -1,0 +1,14 @@
+version: '3'
+services:
+  UpdateServer:
+    build:
+     context: .
+     dockerfile: Dockerfile
+    image: "updateserver"
+    container_name: dockerUpdateServer
+    networks:
+     - updateserver-net
+    ports:
+     - '8081:8081'
+networks :
+  updateserver-net :

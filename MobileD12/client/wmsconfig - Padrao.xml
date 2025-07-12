@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <Instalacao>1</Instalacao>
+    <Company>
+        <Name>SUA EMPRESA</Name>
+    </Company>
+    <Server>
+        <Ip>IP_SERVIDOR</Ip>
+        <Port>Porta_Servidor</Port>
+    </Server>
+    <Collector>
+        <Brand>Honeywell</Brand>
+        <Scanner>1</Scanner>
+        <Teclado>0</Teclado>
+    </Collector>
+    <License>
+
+    </License>
+</config>

@@ -1,0 +1,208 @@
+﻿inherited FrmAjusteLote: TFrmAjusteLote
+  Caption = 'FrmBase1'
+  DesignerMasterStyle = 0
+  inherited LytBase: TLayout
+    inherited ScaledLayout1: TScaledLayout
+      inherited LytMnTop: TLayout
+        Visible = False
+      end
+      inherited VertScrollBox1: TVertScrollBox
+        Size.Height = 370.000000000000000000
+        Viewport.Width = 390.000000000000000000
+        Viewport.Height = 370.000000000000000000
+        inherited PgcPrincipal: TTabControl
+          Size.Height = 370.000000000000000000
+          inherited TabLista: TTabItem
+            ExplicitSize.cx = 67.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+            inherited GdSearch: TGrid
+              Viewport.Width = 386.000000000000000000
+              Viewport.Height = 297.000000000000000000
+            end
+          end
+          inherited TabDetalhes: TTabItem
+            ExplicitSize.cx = 320.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
+            inherited Código: TLabel
+              Size.Width = 55.000000000000000000
+              Text = 'Produto'
+              Visible = False
+            end
+            inherited EdtCodigo: TEdit
+              TabOrder = 3
+              Visible = False
+            end
+            object RctMaster: TRectangle
+              Align = Top
+              Fill.Color = xFFF1F0F0
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 380.000000000000000000
+              Size.Height = 133.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claNull
+              object EdtEmbalagem: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                StyleLookup = 'editstyle'
+                TabOrder = 0
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 10.000000000000000000
+                Position.Y = 90.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Style, FontColor]
+              end
+              object EdtQtde: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                StyleLookup = 'editstyle'
+                TabOrder = 1
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 160.000000000000000000
+                Position.Y = 90.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Style, FontColor]
+              end
+              object Label1: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 10.000000000000000000
+                Position.Y = 70.000000000000000000
+                Size.Width = 77.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                Text = 'Embalagem'
+              end
+              object Label2: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 160.000000000000000000
+                Position.Y = 70.000000000000000000
+                Size.Width = 77.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                Text = 'Quantidade'
+              end
+              object LblProduto: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 96.000000000000000000
+                Position.Y = 38.000000000000000000
+                Size.Width = 55.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                Text = 'Produto'
+              end
+              object Label3: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 260.000000000000000000
+                Position.Y = 68.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                Text = 'Lotes sem estoque'
+              end
+              object ChkSemEstoque: TSwitch
+                Enabled = False
+                IsChecked = False
+                Position.X = 262.000000000000000000
+                Position.Y = 92.000000000000000000
+                TabOrder = 3
+              end
+              object EdtCdProduto: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                StyleLookup = 'editstyle'
+                TabOrder = 4
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.VertAlign = Trailing
+                Position.X = 14.000000000000000000
+                Position.Y = 32.000000000000000000
+                Size.Width = 80.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Style, FontColor]
+              end
+              object Label4: TLabel
+                AutoSize = True
+                StyledSettings = [Style, FontColor]
+                Position.X = 14.000000000000000000
+                Position.Y = 12.000000000000000000
+                Size.Width = 55.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Family = 'Roboto Th'
+                TextSettings.Font.Size = 14.000000000000000000
+                TextSettings.WordWrap = False
+                Text = 'Produto'
+              end
+            end
+            object RctDet: TRectangle
+              Align = Client
+              Margins.Left = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 380.000000000000000000
+              Size.Height = 222.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = claNull
+              object Button1: TButton
+                Position.X = 288.000000000000000000
+                Position.Y = 172.000000000000000000
+                TabOrder = 0
+                Text = 'Cancelar'
+                OnClick = Button1Click
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited GestureManager1: TGestureManager
+    GestureData = <
+      item
+        Control = LstPrincipal
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end
+          item
+            GestureID = sgiUp
+          end
+          item
+            GestureID = sgiDown
+          end>
+      end
+      item
+        Control = GdSearch
+        Collection = <>
+      end>
+  end
+end
