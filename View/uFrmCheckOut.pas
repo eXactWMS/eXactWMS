@@ -17,10 +17,26 @@ uses
   , EmbalagemCaixaCtrl
   , PedidoSaidaCtrl
   , PedidoVolumeCtrl
-  , ProdutoCtrl, Vcl.DBGrids, Vcl.Samples.Gauges, VrControls, VrAngularMeter,
+  , ProdutoCtrl, Vcl.DBGrids, Vcl.Samples.Gauges,
   dxSkinsCore, dxSkinsDefaultPainters, Vcl.Buttons, Vcl.ComCtrls, ACBrBase,
   ACBrETQ, dxCameraControl,
-  Services.Base.Cadastro, uFrmAutorizarOperacao;
+  Services.Base.Cadastro, uFrmAutorizarOperacao, dxSkinBasic, dxSkinBlack,
+  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom,
+  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
+  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringtime, dxSkinStardust,
+  dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinWXI,
+  dxSkinXmas2008Blue;
 
 type
   TOperacao = (opCheckOut, opReCheckOut);
@@ -87,7 +103,7 @@ type
     LblF2: TLabel;
     LblF5: TLabel;
     LblF3: TLabel;
-    pbrProdutividadeAnalogico: TVrAngularMeter;
+
     TmProdutividade: TTimer;
     Panel3: TPanel;
     Label18: TLabel;
@@ -998,7 +1014,7 @@ begin
   LblUnidHora.Caption     := '0';
   LblUnidHora.Font.Color  := ClWhite;
   PnlIndicador.Color      := FrmCheckOut.Color;
-  PbrProdutividadeAnalogico.Position := 0;
+ //PbrProdutividadeAnalogico.Position := 0;
   vTimerIndProdutividade  := 0;
   TmProdutividade.Enabled := False;
   if (PnlCxaVol.Enabled) then//and (EdtCaixaEmbalagemId.Focused) then
@@ -1147,10 +1163,10 @@ begin
   LblUnidHora.Font.Color := PnlIndicador.Color;
 
 //  pbrProdutividadeAnalogico.NeedleColor := clBlack;
-  pbrProdutividadeAnalogico.MaxValue := Trunc(1.25 * vgProdutividadeMeta);
-  pbrProdutividadeAnalogico.Position := vUnidHora;
-  pbrProdutividadeAnalogico.Percent1 := Trunc(vgProdutividadeAceitavel / (1.25 * vgProdutividadeMeta)*100); //vgProdutividadeAceitavel-1;
-  pbrProdutividadeAnalogico.Percent2 := Trunc(vgProdutividadeMeta / (1.25 * vgProdutividadeMeta)*100) - pbrProdutividadeAnalogico.Percent1;
+  //pbrProdutividadeAnalogico.MaxValue := Trunc(1.25 * vgProdutividadeMeta);
+  //pbrProdutividadeAnalogico.Position := vUnidHora;
+  //pbrProdutividadeAnalogico.Percent1 := Trunc(vgProdutividadeAceitavel / (1.25 * vgProdutividadeMeta)*100); //vgProdutividadeAceitavel-1;
+  //pbrProdutividadeAnalogico.Percent2 := Trunc(vgProdutividadeMeta / (1.25 * vgProdutividadeMeta)*100) - pbrProdutividadeAnalogico.Percent1;
 end;
 
 procedure TFrmCheckOut.StartCheckOut;

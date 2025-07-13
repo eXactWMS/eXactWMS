@@ -1,16 +1,18 @@
 inherited FrmRelLogControle: TFrmRelLogControle
   Caption = 'Controle de Log'#39's'
   ClientHeight = 614
+  StyleElements = [seFont, seClient, seBorder]
   ExplicitHeight = 616
-  PixelsPerInch = 96
   TextHeight = 17
+  inherited LblPaginacao: TLabel
+    StyleElements = [seFont, seClient, seBorder]
+  end
+  inherited SpPaginacao: TJvSpinEdit
+    StyleElements = [seFont, seClient, seBorder]
+  end
   inherited PgcBase: TcxPageControl
-    Left = -1
-    Top = 59
     Height = 559
     Properties.ActivePage = TabDashBoard
-    ExplicitLeft = -1
-    ExplicitTop = 59
     ExplicitHeight = 559
     ClientRectBottom = 559
     inherited TabListagem: TcxTabSheet
@@ -22,21 +24,43 @@ inherited FrmRelLogControle: TFrmRelLogControle
       inherited AdvGridLookupBar1: TAdvGridLookupBar
         Height = 497
         ExplicitHeight = 497
+        TMSStyle = 8
+      end
+      inherited PnlPesquisaCadastro: TPanel
+        StyleElements = [seFont, seClient, seBorder]
+        inherited Label1: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited LblClearFilter: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited LblRegTit: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited LblTotReg: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited CbCampoPesq: TComboBox
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited EdtConteudoPesq: TLabeledEdit
+          StyleElements = [seFont, seClient, seBorder]
+        end
       end
     end
     inherited TabPrincipal: TcxTabSheet
-      ExplicitTop = 24
-      ExplicitWidth = 1157
       ExplicitHeight = 535
       inherited LblTotRegCaption: TLabel
         Left = 20
         Top = 116
+        StyleElements = [seFont, seClient, seBorder]
         ExplicitLeft = 20
         ExplicitTop = 116
       end
       inherited LblTotRegistro: TLabel
         Left = 143
         Top = 116
+        StyleElements = [seFont, seClient, seBorder]
         ExplicitLeft = 143
         ExplicitTop = 116
       end
@@ -66,7 +90,23 @@ inherited FrmRelLogControle: TFrmRelLogControle
       end
       inherited PnlInfo: TPanel
         Top = 349
+        StyleElements = [seFont, seClient, seBorder]
         ExplicitTop = 349
+        inherited LblInfo02: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited LblInfo10: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited LblInfo08: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited LblInfo11: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
+        inherited LblInfo12: TLabel
+          StyleElements = [seFont, seClient, seBorder]
+        end
       end
       inherited LstReport: TAdvStringGrid
         Top = 139
@@ -354,16 +394,27 @@ inherited FrmRelLogControle: TFrmRelLogControle
       end
     end
     inherited TbFrameWeb: TcxTabSheet
-      ExplicitTop = 24
-      ExplicitWidth = 1157
       ExplicitHeight = 535
     end
     inherited TabimportacaoCSV: TcxTabSheet
-      ExplicitTop = 24
-      ExplicitWidth = 1157
       ExplicitHeight = 535
+      inherited LblArqImport: TLabel
+        StyleElements = [seFont, seClient, seBorder]
+      end
+      inherited LblAguardeImportacaoCSV: TLabel
+        StyleElements = [seFont, seClient, seBorder]
+      end
+      inherited LblImportaCSV: TLabel
+        StyleElements = [seFont, seClient, seBorder]
+      end
       inherited DbgImporta: TDBGrid
         Height = 331
+      end
+      inherited EdtFileIimport: TEdit
+        StyleElements = [seFont, seClient, seBorder]
+      end
+      inherited MmImporta: TMemo
+        StyleElements = [seFont, seClient, seBorder]
       end
     end
     object TabDashBoard: TcxTabSheet
@@ -371,6 +422,9 @@ inherited FrmRelLogControle: TFrmRelLogControle
       Caption = 'DashBoard'
       ImageIndex = 4
       OnShow = TabDashBoardShow
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object WebBrowser1: TWebBrowser
         Left = 0
         Top = 154
@@ -722,8 +776,8 @@ inherited FrmRelLogControle: TFrmRelLogControle
           object LblTotalRequisicao: TLabel
             Left = 1
             Top = 33
-            Width = 183
-            Height = 85
+            Width = 29
+            Height = 65
             CustomHint = BalloonHint1
             Align = alClient
             Alignment = taCenter
@@ -734,8 +788,6 @@ inherited FrmRelLogControle: TFrmRelLogControle
             Font.Name = 'Segoe UI Black'
             Font.Style = []
             ParentFont = False
-            ExplicitWidth = 29
-            ExplicitHeight = 65
           end
           object PnlTitRequisicao: TPanel
             Left = 1
@@ -779,8 +831,8 @@ inherited FrmRelLogControle: TFrmRelLogControle
           object LblTotalAdvertencia: TLabel
             Left = 1
             Top = 33
-            Width = 183
-            Height = 85
+            Width = 29
+            Height = 65
             CustomHint = BalloonHint1
             Align = alClient
             Alignment = taCenter
@@ -793,8 +845,6 @@ inherited FrmRelLogControle: TFrmRelLogControle
             Font.Style = []
             ParentColor = False
             ParentFont = False
-            ExplicitWidth = 29
-            ExplicitHeight = 65
           end
           object PnlTitAdvertencia: TPanel
             Left = 1
@@ -838,8 +888,8 @@ inherited FrmRelLogControle: TFrmRelLogControle
           object LblTotalErro: TLabel
             Left = 1
             Top = 33
-            Width = 183
-            Height = 85
+            Width = 29
+            Height = 65
             CustomHint = BalloonHint1
             Align = alClient
             Alignment = taCenter
@@ -850,8 +900,6 @@ inherited FrmRelLogControle: TFrmRelLogControle
             Font.Name = 'Segoe UI Black'
             Font.Style = []
             ParentFont = False
-            ExplicitWidth = 29
-            ExplicitHeight = 65
           end
           object PnlTitErro: TPanel
             Left = 1
@@ -919,7 +967,12 @@ inherited FrmRelLogControle: TFrmRelLogControle
     end
   end
   inherited PnHeader: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    inherited LblForm: TLabel
+      StyleElements = [seFont, seClient, seBorder]
+    end
     inherited PanWin8: TPanel
+      StyleElements = [seFont, seClient, seBorder]
       inherited BtnFechar: TsImage
         Top = 0
         ExplicitTop = 0
@@ -932,30 +985,54 @@ inherited FrmRelLogControle: TFrmRelLogControle
         Top = 0
         ExplicitTop = 0
       end
+      inherited EdtPesq: TLabeledEdit
+        StyleElements = [seFont, seClient, seBorder]
+      end
     end
   end
   inherited PnlImgObjeto: TPanel
     Left = 954
     Top = -12
+    StyleElements = [seFont, seClient, seBorder]
     ExplicitLeft = 954
     ExplicitTop = -12
+    inherited PnlBotImgObjeto: TPanel
+      StyleElements = [seFont, seClient, seBorder]
+    end
   end
   inherited PnlErro: TPanel
     Top = 592
+    StyleElements = [seFont, seClient, seBorder]
     ExplicitTop = 592
     inherited LblMensShowErro: TLabel
-      Width = 1156
-      Height = 22
+      StyleElements = [seFont, seClient, seBorder]
     end
   end
   inherited PnlConfigPrinter: TPanel
     Left = 677
     Top = 288
+    StyleElements = [seFont, seClient, seBorder]
     ExplicitLeft = 677
     ExplicitTop = 288
+    inherited LblLanguagePrinter: TLabel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited LblPortConfigPrinter: TLabel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited LblAlertaConfigPrinter: TLabel
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited CbModeloConfigPrinter: TComboBox
+      StyleElements = [seFont, seClient, seBorder]
+    end
+    inherited CbPortaConfigPrinter: TComboBox
+      StyleElements = [seFont, seClient, seBorder]
+    end
     inherited Panel7: TPanel
+      StyleElements = [seFont, seClient, seBorder]
       inherited LblTitConfigPrinter: TLabel
-        Width = 313
+        StyleElements = [seFont, seClient, seBorder]
       end
     end
   end
@@ -965,6 +1042,10 @@ inherited FrmRelLogControle: TFrmRelLogControle
   inherited TmImportacaoCSV: TTimer
     Left = 75
     Top = 339
+  end
+  inherited frxDBDataset1: TfrxDBDataset
+    Left = 382
+    Top = 391
   end
   inherited frxReport1: TfrxReport
     Datasets = <
@@ -990,6 +1071,7 @@ inherited FrmRelLogControle: TFrmRelLogControle
         Value = ''
       end>
     Style = <>
+    Watermarks = <>
   end
   object WebCharts1: TWebCharts
     Left = 240

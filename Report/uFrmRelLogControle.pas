@@ -16,7 +16,24 @@ uses
   Vcl.Buttons, Vcl.ComCtrls, Vcl.DBGrids, dxGDIPlusClasses, acImage, System.Generics.Collections,
   AdvLookupBar, AdvGridLookupBar, Vcl.Grids, AdvObj, BaseGrid, cxPC, Vcl.Mask,
   JvExMask, JvSpin, JvToolEdit, System.JSON, REST.Json, Rest.Types, DataSet.Serialize,
-  Vcl.OleCtrls, SHDocVw, View.WebCharts;
+  Vcl.OleCtrls, SHDocVw, View.WebCharts, dxSkinBasic, dxSkinBlack, dxSkinBlue,
+  dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
+  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringtime, dxSkinStardust,
+  dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinWXI,
+  dxSkinXmas2008Blue, frxSmartMemo, frxExportBaseImageSettingsDialog,
+  frCoreClasses;
 
 type
   TFrmRelLogControle = class(TFrmReportBase)
@@ -99,7 +116,7 @@ implementation
 
 {$R *.dfm}
 
-Uses Views.Pequisa.Usuarios, UsuarioCtrl, LogControleCtrl, Vcl.DialogMessage, Charts.Types, TypInfo;
+Uses Views.Pequisa.Usuarios, UsuarioCtrl, LogControleCtrl, Vcl.DialogMessage,  TypInfo;
 
 procedure TFrmRelLogControle.BtnFecharClick(Sender: TObject);
 begin
@@ -392,69 +409,7 @@ procedure TFrmRelLogControle.ShowGrafico;
     JsonDashBoard030405, JsonDashBoard06 : TJsonArray;
     xRetorno : Integer;
 }Begin
-TThread.Synchronize(TThread.CurrentThread, procedure
-begin
-  WebCharts1
-
-  .NewProject
-  .Rows
-  .tag
-  .add(
-    WebCharts1
-    .ContinuosProject
-       .Charts
-         ._ChartType(line)
-           .Attributes
-             .Name('LogReq')
-             .ColSpan(12)
-             .Options
-               .SemiCircule(True)
-             .&End
-             .Heigth(180)
-             .Options
-                .Title
-                  .fontSize(14)
-                  .Text('Log de Requisições')
-                .&End
-             .&End
-                 .DataSet
-                   .textLabel('Requisição')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemDashBoardRequisiscao)
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('0, 0, 255')
-                 .&End
-                 .DataSet
-                   .textLabel('Advertencia')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemDashBoardAdvertencia)
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('255, 255, 0')
-                 .&End
-                 .DataSet
-                   .textLabel('Erro')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemDashBoardErro)
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('255,0,0')
-                 .&End
-           .&End
-         .&End
-         .HTML
-    )
-  .&End
-  .&End
-  .WebBrowser(WebBrowser1)
-  .Generated;
-End);
-{  JsonDashBoard0102   := Nil;
-  JsonDashBoard030405 := Nil;
-  JsonDashBoard06     := Nil;
-  ObjPedidoSaidaCtrl  := Nil;
-}end;
+end;
 
 procedure TFrmRelLogControle.TabDashBoardShow(Sender: TObject);
 begin

@@ -16,7 +16,6 @@ object FrmeXactWMS: TFrmeXactWMS
   Font.Style = []
   FormStyle = fsMDIForm
   KeyPreview = True
-  OldCreateOrder = False
   Position = poScreenCenter
   WindowState = wsMaximized
   OnActivate = FormActivate
@@ -30,7 +29,6 @@ object FrmeXactWMS: TFrmeXactWMS
   DesignSize = (
     1807
     1144)
-  PixelsPerInch = 96
   TextHeight = 13
   object ImgLogoProduct: TImage
     Left = 1065
@@ -7215,7 +7213,6 @@ object FrmeXactWMS: TFrmeXactWMS
     Color = 16117735
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 1378
     DesignSize = (
       1807
       50)
@@ -7361,9 +7358,9 @@ object FrmeXactWMS: TFrmeXactWMS
       OnClick = imgMenuClick
     end
     object LblVersao: TLabel
-      Left = 1275
+      Left = 1704
       Top = 8
-      Width = 481
+      Width = 52
       Height = 18
       CustomHint = FrmEntrada.BalloonHint1
       Alignment = taRightJustify
@@ -7375,7 +7372,6 @@ object FrmeXactWMS: TFrmeXactWMS
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitWidth = 52
     end
     object LblUsuarioTop: TLabel
       Left = 1553
@@ -7395,9 +7391,9 @@ object FrmeXactWMS: TFrmeXactWMS
       ExplicitLeft = 779
     end
     object LblDateTime: TLabel
-      Left = 1301
+      Left = 1730
       Top = 32
-      Width = 455
+      Width = 26
       Height = 16
       CustomHint = FrmEntrada.BalloonHint1
       Alignment = taRightJustify
@@ -7409,7 +7405,6 @@ object FrmeXactWMS: TFrmeXactWMS
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
-      ExplicitWidth = 26
     end
     object lblTitle: TLabel
       Left = 68
@@ -14668,7 +14663,6 @@ object FrmeXactWMS: TFrmeXactWMS
     OpenedWidth = 200
     Placement = svpLeft
     TabOrder = 1
-    ExplicitHeight = 967
     object catMenuItems: TCategoryButtons
       Left = 0
       Top = 0
@@ -15004,7 +14998,6 @@ object FrmeXactWMS: TFrmeXactWMS
       RegularButtonColor = clNone
       SelectedButtonColor = clNone
       TabOrder = 0
-      ExplicitHeight = 967
     end
   end
   object WebBrowser1: TWebBrowser
@@ -15015,8 +15008,6 @@ object FrmeXactWMS: TFrmeXactWMS
     CustomHint = FrmEntrada.BalloonHint1
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 929
-    ExplicitHeight = 756
     ControlData = {
       4C00000017A60000117100000000000000000000000000000000000000000000
       000000004C000000000000000000000001000000E0D057007335CF11AE690800

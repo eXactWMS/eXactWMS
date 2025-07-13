@@ -16,7 +16,24 @@ uses
   Vcl.Buttons, Vcl.ComCtrls, Vcl.DBGrids, dxGDIPlusClasses, acImage, math,
   AdvLookupBar, AdvGridLookupBar, Vcl.Grids, AdvObj, BaseGrid, cxPC, Vcl.Mask,
   JvExMask, JvSpin, Vcl.OleCtrls, SHDocVw, JvToolEdit, View.WebCharts,
-  cxLookAndFeels;
+  cxLookAndFeels, dxSkinBasic, dxSkinBlack, dxSkinBlue, dxSkinBlueprint,
+  dxSkinCaramel, dxSkinCoffee, dxSkinDarkroom, dxSkinDarkSide,
+  dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinOffice2019Black, dxSkinOffice2019Colorful, dxSkinOffice2019DarkGray,
+  dxSkinOffice2019White, dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic,
+  dxSkinSharp, dxSkinSharpPlus, dxSkinSilver, dxSkinSpringtime, dxSkinStardust,
+  dxSkinSummer2008, dxSkinTheAsphaltWorld, dxSkinTheBezier, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinWXI,
+  dxSkinXmas2008Blue, frxSmartMemo, frxExportBaseImageSettingsDialog,
+  frCoreClasses;
 
 type
   TFrmDashProducao = class(TFrmReportBase)
@@ -91,7 +108,7 @@ implementation
 
 {$R *.dfm}
 
-Uses Charts.Types, TypInfo, PedidoSaidaCtrl, uFuncoes;
+Uses TypInfo, PedidoSaidaCtrl, uFuncoes;
 
 procedure TFrmDashProducao.CbTimeClick(Sender: TObject);
 begin
@@ -261,119 +278,6 @@ Var //ObjPedidoSaidaCtrl : TPedidoSaidaCtrl;
     //JsonDashBoard030405, JsonDashBoard06 : TJsonArray;
     xRetorno : Integer;
 Begin
-TThread.Synchronize(TThread.CurrentThread, procedure
-begin
-  WebCharts1
-
-  .NewProject
-  .Rows
-  .tag
-  .add(
-    WebCharts1
-    .ContinuosProject
-       .Charts
-         ._ChartType(Bar)
-           .Attributes
-             .Name('Diariox')
-             .ColSpan(6)
-             .Options
-               .SemiCircule(True)
-             .&End
-             .Heigth(180)
-             .Options
-                .Title
-                  .fontSize(24)
-                  .Text('Produção Unidades')
-                .&End
-             .&End
-                 .DataSet
-                   .textLabel('Demanda')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemDashBoardDemanda)
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('255,255,0')
-                 .&End
-                 .DataSet
-                   .textLabel('Producao')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemDashBoardCortes)
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('0,164,82')
-                 .&End
-                 .DataSet
-                   .textLabel('Cortes/Cancelamento')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemDashBoardCancelados)
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('255,0,0')
-                 .&End
-                 .DataSet
-                   .textLabel('Média Produção')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemPesqGeral)
-                   .Types('line')
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('0,0,0')
-                 .&End
-{                 .DataSet
-                   .textLabel('Eficiência')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemEficiencia)
-                   .Types('line')
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('75, 220, 240')
-                 .&End
-}             .&End
-         .&End
-         .HTML
-    )
-  .&End
-
-//Grafico 02
-  .tag
-    .add(
-      WebCharts1
-      .ContinuosProject
-         .Charts
-           ._ChartType(HorizontalBar)
-             .Attributes
-               .Name('Mensal')
-               .ColSpan(6)
-               .Options
-                 .SemiCircule(True)
-               .&End
-               .Options
-                  .Title
-                    .fontSize(24)
-                    .Text('Produção por Zona/Setor')
-                  .&End
-               .&End
-               .Heigth(270)
-                 .DataSet
-                   .textLabel('Zona')
-                   //.BackgroundColor('30,182,100')
-                   .DataSet(FdMemDashBoardZona)
-                   .Fill(False)
-                   .BorderWidth(2)
-                   .BorderColor('128, 128, 0')
-                 .&End
-             .&End
-           .&End
-           .HTML
-      )
-   .&End
-
-  .&End
-  .WebBrowser(WebBrowser1)
-  .Generated;
-End);
-  //ObjPedidoSaidaCtrl  := Nil;
-  //FreeAndNil(ObjPedidoSaidaCtrl);
 end;
 
 procedure TFrmDashProducao.TmDashBoardTimer(Sender: TObject);
