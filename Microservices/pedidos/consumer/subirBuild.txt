@@ -1,0 +1,3 @@
+Docker login -u rhemasyssolucoes -p g84059095
+Docker build -t rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5 .
+Docker push rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5

@@ -5,10 +5,11 @@
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Linux64</Platform>
-        <TargetedPlatforms>129</TargetedPlatforms>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Console</AppType>
         <MainSource>MicroservicesPedidos.dpr</MainSource>
+        <ProjectName Condition="'$(ProjectName)'==''">MicroservicesPedidos</ProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -30,11 +31,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='iOSSimARM64' and '$(Base)'=='true') or '$(Base_iOSSimARM64)'!=''">
         <Base_iOSSimARM64>true</Base_iOSSimARM64>
-        <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Linux64' and '$(Base)'=='true') or '$(Base_Linux64)'!=''">
-        <Base_Linux64>true</Base_Linux64>
         <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
@@ -63,12 +59,6 @@
         <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Linux64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Linux64)'!=''">
-        <Cfg_1_Linux64>true</Cfg_1_Linux64>
-        <CfgParent>Cfg_1</CfgParent>
-        <Cfg_1>true</Cfg_1>
-        <Base>true</Base>
-    </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
         <Cfg_1_Win32>true</Cfg_1_Win32>
         <CfgParent>Cfg_1</CfgParent>
@@ -78,12 +68,6 @@
     <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
         <Cfg_2>true</Cfg_2>
         <CfgParent>Base</CfgParent>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Linux64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Linux64)'!=''">
-        <Cfg_2_Linux64>true</Cfg_2_Linux64>
-        <CfgParent>Cfg_2</CfgParent>
-        <Cfg_2>true</Cfg_2>
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
@@ -171,9 +155,6 @@
     <PropertyGroup Condition="'$(Base_iOSSimARM64)'!=''">
         <DCC_UsePackage>fmx;DbxCommonDriver;bindengine;IndyIPCommon;emsclient;IndyProtocols;dbxcds;FmxTeeUI;FireDACSqliteDriver;DbxClientDriver;soapmidas;dbexpress;inet;FireDACDBXDriver;CustomIPTransport;IndySystem;ibxbindings;FireDACCommon;emsserverresource;bindcompdbx;rtl;DBXSqliteDriver;DataSnapFireDAC;FireDAC;xmlrtl;ibxpress;dsnap;DataSnapNativeClient;emshosting;FireDACCommonDriver;IndyIPClient;emsedge;bindcompfmx;ibmonitor;fmxFireDAC;DataSnapCommon;fmxase;dbrtl;DBXInterBaseDriver;bindcomp;inetstn;IndyCore;RESTBackendComponents;RESTComponents;IndyIPServer;dsnapxml;DataSnapClient;DataSnapProviderClient;emsclientfiredac;FireDACDSDriver;tethering;CloudService;FMXTee;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Base_Linux64)'!=''">
-        <DCC_UsePackage>DataSnapServer;fmx;DbxCommonDriver;bindengine;FireDACCommonODBC;emsclient;IndyProtocols;dbxcds;FireDACSqliteDriver;DbxClientDriver;soapmidas;dbexpress;inet;CustomIPTransport;FireDACMSSQLDriver;IndySystem;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;rtl;FireDACMySQLDriver;DataSnapFireDAC;FireDAC;xmlrtl;dsnap;FireDACDb2Driver;DataSnapNativeClient;DatasnapConnectorsFreePascal;emshosting;FireDACCommonDriver;emsedge;inetdb;FireDACASADriver;FireDACInfxDriver;DataSnapCommon;dbrtl;FireDACOracleDriver;DataSnapIndy10ServerTransport;DataSnapConnectors;FireDACMongoDBDriver;FireDACTDataDriver;bindcomp;inetstn;IndyCore;RESTBackendComponents;FireDACADSDriver;RESTComponents;dsnapxml;DataSnapClient;emsclientfiredac;FireDACPgDriver;CloudService;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
-    </PropertyGroup>
     <PropertyGroup Condition="'$(Base_OSX64)'!=''">
         <DCC_UsePackage>DataSnapServer;fmx;DbxCommonDriver;bindengine;FireDACCommonODBC;IndyIPCommon;emsclient;IndyProtocols;dbxcds;FmxTeeUI;DBXFirebirdDriver;FireDACSqliteDriver;DbxClientDriver;soapmidas;dbexpress;inet;FireDACDBXDriver;fmxdae;CustomIPTransport;FireDACMSSQLDriver;IndySystem;ibxbindings;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;bindcompdbx;rtl;FireDACMySQLDriver;DBXSqliteDriver;DataSnapFireDAC;inetdbxpress;FireDAC;xmlrtl;ibxpress;dsnap;DBXOracleDriver;DBXInformixDriver;DataSnapNativeClient;fmxobj;emshosting;FireDACCommonDriver;IndyIPClient;emsedge;bindcompfmx;inetdb;ibmonitor;FireDACASADriver;fmxFireDAC;DBXMySQLDriver;DataSnapCommon;fmxase;dbrtl;FireDACOracleDriver;DataSnapIndy10ServerTransport;DBXInterBaseDriver;FireDACMongoDBDriver;FireDACTDataDriver;bindcomp;inetstn;IndyCore;RESTBackendComponents;RESTComponents;IndyIPServer;dsnapxml;DataSnapClient;DataSnapProviderClient;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;tethering;DBXSybaseASADriver;CloudService;FMXTee;soaprtl;soapserver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_ConsoleTarget>true</DCC_ConsoleTarget>
@@ -208,16 +189,9 @@
         <DCC_IntegerOverflowCheck>true</DCC_IntegerOverflowCheck>
         <DCC_RangeChecking>true</DCC_RangeChecking>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_1_Linux64)'!=''">
-        <DCC_ExeOutput>.\deploy</DCC_ExeOutput>
-        <DCC_UnitSearchPath>..\Delphi_AMQP\Source;..\..\..\exactwmsapi\Controller;.\..\..\..\modules\dataset-serialize\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <Debugger_Launcher>/usr/bin/gnome-terminal -- &quot;%debuggee%&quot;</Debugger_Launcher>
-        <Manifest_File>(None)</Manifest_File>
-        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
-    </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
-        <DCC_UnitSearchPath>..\Delphi_AMQP\Source;..\..\..\exactwmsapi\Controller;.\..\..\..\modules\dataset-serialize\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>..\..\..\..\modules\Delphi_AMQP\Source;..\..\..\..\modules\dataset-serialize\src;..\..\..\..\exactwmsapi\Controller;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>..\(None)</Manifest_File>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
@@ -228,13 +202,6 @@
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
         <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
         <DCC_DebugInformation>0</DCC_DebugInformation>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_2_Linux64)'!=''">
-        <DCC_ExeOutput>.\deploy</DCC_ExeOutput>
-        <DCC_UnitSearchPath>..\Delphi_AMQP\Source;..\..\..\exactwmsapi\Controller;.\..\..\..\modules\dataset-serialize\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
-        <Debugger_Launcher>/usr/bin/gnome-terminal -- &quot;%debuggee%&quot;</Debugger_Launcher>
-        <Manifest_File>(None)</Manifest_File>
-        <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <DCC_UnitSearchPath>..\Delphi_AMQP\Source;..\..\..\exactwmsapi\Controller;.\..\..\..\modules\dataset-serialize\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
@@ -257,13 +224,13 @@
         <DCCReference Include="..\..\..\Model\PedidoSaidaClass.pas"/>
         <DCCReference Include="..\..\..\Model\PedidoProdutoClass.pas"/>
         <DCCReference Include="..\..\..\Model\ProdutoClass.pas"/>
-        <DCCReference Include="..\..\..\Model\LaboratoriosClass.Pas"/>
+        <DCCReference Include="..\..\..\Model\LaboratoriosClass.pas"/>
         <DCCReference Include="..\..\..\Model\RastroClass.pas"/>
         <DCCReference Include="..\..\..\Model\PedidoClass.pas"/>
-        <DCCReference Include="..\..\..\Model\PessoaClass.Pas"/>
+        <DCCReference Include="..\..\..\Model\PessoaClass.pas"/>
         <DCCReference Include="..\..\..\Model\PessoaTipoClass.pas"/>
-        <DCCReference Include="..\..\..\Model\OperacaoTipoClass.Pas"/>
-        <DCCReference Include="..\..\..\Model\OperacaoNaturezaClass.Pas"/>
+        <DCCReference Include="..\..\..\Model\OperacaoTipoClass.pas"/>
+        <DCCReference Include="..\..\..\Model\OperacaoNaturezaClass.pas"/>
         <DCCReference Include="..\..\..\Model\MedicamentoTipoClass.pas"/>
         <DCCReference Include="..\..\..\Model\ProdutoTipoClass.pas"/>
         <DCCReference Include="..\..\..\Model\UnidadeClass.pas"/>
@@ -323,7 +290,7 @@
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
-            <Deployment Version="5">
+            <Deployment Version="4">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
@@ -361,6 +328,16 @@
                     </Platform>
                     <Platform Name="Win32">
                         <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClasses">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
                     </Platform>
                 </DeployClass>
                 <DeployClass Name="AndroidFileProvider">
@@ -1307,7 +1284,6 @@
                 <Platform value="Android64">False</Platform>
                 <Platform value="iOSDevice64">False</Platform>
                 <Platform value="iOSSimARM64">False</Platform>
-                <Platform value="Linux64">True</Platform>
                 <Platform value="OSX64">False</Platform>
                 <Platform value="OSXARM64">False</Platform>
                 <Platform value="Win32">True</Platform>

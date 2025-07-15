@@ -33,7 +33,7 @@ RUN \
  apt-get -y autoclean 
 
 WORKDIR /root
-COPY ./deploy deploy
+COPY src/deploy deploy
 # Comandos no container
 
 CMD cd deploy;chmod +x ./MicroservicesPedidos ; ./MicroservicesPedidos
