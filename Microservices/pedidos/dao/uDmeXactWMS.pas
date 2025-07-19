@@ -11,7 +11,7 @@ uses
   FireDAC.Comp.ScriptCommands, FireDAC.Stan.Util,
   FireDAC.Comp.Script, FireDAC.Comp.Client, Data.DB,
   FireDAC.Comp.DataSet, REST.Types, REST.Client,
-  Data.Bind.Components, Data.Bind.ObjectScope, System.JSon, ConfiguracaoClass,
+  Data.Bind.Components, Data.Bind.ObjectScope, System.JSon,
   FireDAC.Phys.MSSQLDef, FireDAC.Comp.UI,
   FireDAC.Phys.ODBCBase, FireDAC.Phys.MSSQL, ufuncoes, FireDAC.ConsoleUI.Wait;
 
@@ -51,6 +51,11 @@ Var
   vIpMain, vIpReport, vIpSeach: AnsiString;
   vPortMain, vPortReport, vPortSearch: String;
   EtqCodBarra_Modelo, EtqCodBarra_Porta, TimeEtq, Temperatura: String;
+  Server: string;
+  Driver: string;
+  Database: string;
+  UserName: string;
+  Password: string;
 begin
   inherited;
 
@@ -64,6 +69,22 @@ begin
     HOST_RABBIT := GetEnvironmentVariable('HOST_RABBIT');
     USER_RABBIT := GetEnvironmentVariable('USER_RABBIT');
     PASSWORD_RABBIT := GetEnvironmentVariable('PASSWORD_RABBIT');
+
+    ConnRhemaWMS.Params.Clear;
+    ConnRhemaWMS.Params.add('DriverID=MSSQL');
+    ConnRhemaWMS.Params.add('Server=' + GetEnvironmentVariable
+      ('RHEMA_DB_HOST'));
+    ConnRhemaWMS.Params.add('ApplicationName=Microservice');
+    ConnRhemaWMS.Params.add('Database=' + GetEnvironmentVariable
+      ('RHEMA_DB_DATABASE'));
+    ConnRhemaWMS.Params.add('User_Name=' + GetEnvironmentVariable
+      ('RHEMA_DB_USER'));
+    ConnRhemaWMS.Params.add('POOL_MaximumItems=200');
+    ConnRhemaWMS.Params.add('Password=' + GetEnvironmentVariable
+      ('RHEMA_DB_PASSWORD'));
+    ConnRhemaWMS.Params.add('POOL_ExpireTimeout=1000');
+    ConnRhemaWMS.Params.add('POOL_CleanupTimeout=3000');
+    ConnRhemaWMS.Params.add('Pooled=True');
     Writeln('leitura das variaveis de ambiente finalizada');
 
   end
@@ -92,10 +113,27 @@ begin
       ClientGraphics.BASEURL := 'http://' + ArqIni.ReadString('msService',
         'IpMain', 'exactwms.ddns.net:32100');
 
-      HOST_RABBIT := ArqIni.ReadString('msService', 'hostRabbit', ' 192.168.1.143');
+      HOST_RABBIT := ArqIni.ReadString('msService', 'hostRabbit',
+        ' 192.168.1.143');
       USER_RABBIT := ArqIni.ReadString('msService', 'userRabbit', 'guest');
       PASSWORD_RABBIT := ArqIni.ReadString('msService',
         'passWordRabbit', 'guest');
+
+      Server := ArqIni.ReadString('BD', 'Server', '');
+
+      Driver := ArqIni.ReadString('BD', 'driver', ' MsSql');
+      Database := ArqIni.ReadString('BD', 'Database', '');
+      UserName := ArqIni.ReadString('BD', 'user', '');
+      Password := ArqIni.ReadString('BD', 'pwd', '');
+      ConnRhemaWMS.Params.Clear;
+      ConnRhemaWMS.Params.AddPair('Server', Server);
+      ConnRhemaWMS.Params.add('ApplicationName=Microservice');
+      ConnRhemaWMS.Params.AddPair('Database', Database);
+      ConnRhemaWMS.Params.AddPair('User_Name', UserName);
+      ConnRhemaWMS.Params.AddPair('Password', Password);
+      ConnRhemaWMS.Params.AddPair('DriverID', 'MsSql');
+
+
     End;
     BASEURL := RESTClientWMS.BASEURL;
     BASEURLREPORT := ClientReport.BASEURL;

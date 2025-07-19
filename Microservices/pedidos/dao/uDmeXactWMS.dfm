@@ -9,12 +9,12 @@ inherited DmeXactWMS: TDmeXactWMS
   inherited QryTemp: TFDQuery
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll
-    Left = 127
+    Left = 151
     Top = 78
   end
   inherited FDTransaction1: TFDTransaction
-    Left = 79
-    Top = 212
+    Left = 159
+    Top = 148
   end
   inherited FDScript1: TFDScript
     Left = 127
@@ -26,22 +26,22 @@ inherited DmeXactWMS: TDmeXactWMS
   end
   inherited QryData: TFDQuery
     Connection = ConnRhemaWMS
-    Left = 111
-    Top = 110
+    Left = 151
+    Top = 238
   end
   inherited RESTClientWMS: TRESTClient
     BaseURL = 'http://192.168.0.165:8200'
-    Left = 190
-    Top = 61
+    Left = 222
+    Top = 29
   end
   inherited RESTRequestWMS: TRESTRequest
     ConnectTimeout = 600000
     ReadTimeout = 600000
-    Left = 190
+    Left = 414
     Top = 19
   end
   inherited RESTResponseWMS: TRESTResponse
-    Left = 193
+    Left = 425
     Top = 106
   end
   inherited FDConnection1: TFDConnection
@@ -49,43 +49,43 @@ inherited DmeXactWMS: TDmeXactWMS
     Top = 216
   end
   inherited RESTClientCep: TRESTClient
-    Left = 179
-    Top = 182
+    Left = 419
+    Top = 174
   end
   inherited RESTRequestCep: TRESTRequest
     AssignedValues = [rvConnectTimeout, rvReadTimeout]
     ConnectTimeout = 300000
     ReadTimeout = 300000
-    Left = 241
-    Top = 182
+    Left = 481
+    Top = 174
   end
   inherited RESTResponseCep: TRESTResponse
-    Left = 302
-    Top = 180
+    Left = 542
+    Top = 172
   end
   inherited ClientGraphics: TRESTClient
-    Left = 241
-    Top = 227
+    Left = 481
+    Top = 219
   end
   inherited ReqGraphics: TRESTRequest
-    Left = 179
-    Top = 227
+    Left = 419
+    Top = 219
   end
   inherited RespGraphics: TRESTResponse
-    Left = 294
-    Top = 229
+    Left = 534
+    Top = 221
   end
   inherited ClientReport: TRESTClient
-    Left = 263
-    Top = 59
+    Left = 431
+    Top = 43
   end
   inherited RequestReport: TRESTRequest
-    Left = 264
-    Top = 18
+    Left = 496
+    Top = 10
   end
   inherited ResponseReport: TRESTResponse
-    Left = 266
-    Top = 104
+    Left = 578
+    Top = 96
   end
   inherited FDPhysMSSQLDriverLink1: TFDPhysMSSQLDriverLink
     Left = 40

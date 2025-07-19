@@ -1,0 +1,28 @@
+21:57:32.219 - Carregando configuracoes...
+21:57:32.267 - Configuracoes carregadas
+21:57:32.267 - Iniciando comunicacao com mensageria
+21:57:32.303 - Conectando servidor rabbit :   192.168.1.143
+21:58:00.173 - Carregando configuracoes...
+21:58:00.213 - Configuracoes carregadas
+21:58:00.214 - Iniciando comunicacao com mensageria
+21:58:00.254 - Conectando servidor rabbit :   192.168.1.143
+21:58:02.315 - Imposivel conectar tentando novamente em 5 segundos - Socket Error # 10061
+Connection refused.
+22:02:46.493 - Carregando configuracoes...
+22:02:46.540 - Configuracoes carregadas
+22:02:46.540 - Iniciando comunicacao com mensageria
+22:02:46.572 - Conectando servidor rabbit :   192.168.1.143
+22:47:00.698 - Carregando configuracoes...
+22:47:00.736 - Configuracoes carregadas
+22:47:00.736 - Iniciando comunicacao com mensageria
+22:47:00.776 - Conectando servidor rabbit :   192.168.1.143
+22:47:03.904 - Imposivel conectar tentando novamente em 5 segundos - Disconnected
+22:47:11.951 - Imposivel conectar tentando novamente em 5 segundos - Disconnected
+22:47:20.001 - Imposivel conectar tentando novamente em 5 segundos - Disconnected
+22:47:28.054 - Imposivel conectar tentando novamente em 5 segundos - Disconnected
+22:47:36.124 - Imposivel conectar tentando novamente em 5 segundos - Disconnected
+22:53:28.626 - Carregando configuracoes...
+22:53:28.689 - Configuracoes carregadas
+22:53:28.689 - Iniciando comunicacao com mensageria
+22:53:28.728 - Conectando servidor rabbit :   192.168.1.143
+22:53:28.780 - Sucesso  servidor rabbit :   192.168.1.143

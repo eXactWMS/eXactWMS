@@ -5,13 +5,14 @@ interface
 // {"Zona":9,"PedidoId":1,"FilaProc":"PICKING ATB/PSICO/GELADEIRA"}
 uses
   Horse,
+  exectwms.services.gerarPedidos,
   System.StrUtils,
   System.SysUtils,
   System.Classes,
   Horse.GBSwagger.Register,
   Horse.GBSwagger.controller,
   System.JSON.Serializers,
-  REST.Json,
+  REST.JSON,
   extawms.model.pedidosProducer.pedidoDto,
   extawms.model.pedidosProducer.pedido,
   GBSwagger.Path.Attributes;
@@ -21,6 +22,7 @@ type
   [SwagPath('v1', 'Pedidos')]
   TControllerPedidos = class(THorseGBSwagger)
   private
+    FlistPedidos: TstringList;
   public
     [SwagPost('Gerar', 'Geração de pedidos via mensageria')]
     [SwagParamBody('Itens', TPedidosDto, 'Informe os pedidos')]
@@ -35,24 +37,29 @@ implementation
 procedure TControllerPedidos.gerar();
 var
   Dados: TPedidosDto;
-  Pedido: TPedidoDto;
-
+  pedido: TPedidoDto;
+  LGerar: TgerarPedidos;
+  LpedidosList: string;
   Msg: string;
 begin
-  dados:= rest.Json.TJson.JsonToObject<TPedidosDto>(FRequest.Body);
+  Dados := REST.JSON.TJson.JsonToObject<TPedidosDto>(FRequest.Body);
 
   try
     Msg := 'Processando pedidos: ' + sLineBreak;
-
-
-    for Pedido in Dados.Pedidos do
+    FlistPedidos := TstringList.create;
+    for pedido in Dados.Pedidos do
     begin
- 
-    end;
 
+      if LpedidosList = '' then
+        LpedidosList := (inttostr(pedido.PedidoId))
+      else
+        LpedidosList := LpedidosList + ',' + (inttostr(pedido.PedidoId))
+    end;
+    LGerar := TgerarPedidos.create;
+    LGerar.gerar(LpedidosList);
+    FreeAndNil(LGerar);
     FResponse.Send('ok pedidos gerados');
   finally
-
     Dados.Free;
   end;
 end;

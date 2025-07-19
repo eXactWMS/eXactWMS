@@ -29,11 +29,11 @@ services:
   pedidosworker1:
     restart: always
     image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
-    container_name: docker_exactwms_conveniencia
+    container_name: docker_exactwms_medicamento
     environment:
       <<: *default-env
       RHEMA_SERVER_PORT: "8301"
-      RABBIT_FILA: "Zona Picking Conveniencia"
+      RABBIT_FILA: "PICKING MEDICAMENTO"
     ports:
       - "8301:8301"
     networks:
@@ -46,7 +46,7 @@ services:
     environment:
       <<: *default-env
       RHEMA_SERVER_PORT: "8302"
-      RABBIT_FILA: "Zona Picking Perfumaria"
+      RABBIT_FILA: "PICKING PERFUMARIA"
     ports:
       - "8302:8302"
     networks:
@@ -59,11 +59,63 @@ services:
     environment:
       <<: *default-env
       RHEMA_SERVER_PORT: "8303"
-      RABBIT_FILA: "Zona Picking Dermo"
+      RABBIT_FILA: "PICKING DERMO"
     ports:
       - "8303:8303"
     networks:
       - exactwmsservice-net
 
+  pedidosworker4:
+    image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
+    restart: always
+    container_name: docker_exactwms_atb
+    environment:
+      <<: *default-env
+      RHEMA_SERVER_PORT: "8304"
+      RABBIT_FILA: "PICKING ATB/PSICO/GELADEIRA"
+    ports:
+      - "8304:8304"
+    networks:
+      - exactwmsservice-net 
+
+  pedidosworker5:
+    image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
+    restart: always
+    container_name: docker_exactwms_conveniencia
+    environment:
+      <<: *default-env
+      RHEMA_SERVER_PORT: "8306"
+      RABBIT_FILA: "PICKING CONVENIENCIA"
+    ports:
+      - "8306:8306"
+    networks:
+      - exactwmsservice-net   
+
+  pedidosworker6:
+    image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
+    restart: always
+    container_name: docker_exactwms_abs
+    environment:
+      <<: *default-env
+      RHEMA_SERVER_PORT: "8305"
+      RABBIT_FILA: "PICKING FRALDA/ABS"
+    ports:
+      - "8305:8305"
+    networks:
+      - exactwmsservice-net                         
+  pedidosworker7:
+    image: rhemasyssolucoes/microservicespedidos:11_07_2025_63a7fc5
+    restart: always
+    container_name: docker_exactwms_leite
+    environment:
+      <<: *default-env
+      RHEMA_SERVER_PORT: "8307"
+      RABBIT_FILA: "PICKING SUPLEMENTO/LEITE"
+    ports:
+      - "8307:8307"
+    networks:
+      - exactwmsservice-net 
+
+               
 networks:
   exactwmsservice-net:
